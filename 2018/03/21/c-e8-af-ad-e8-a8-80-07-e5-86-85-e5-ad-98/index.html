@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Archives: 2018 | Pan</title>
+  <title>C语言_07 内存 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/archives/2018/index.html">
+  <meta name="description" content="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言_07 内存">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1132092356331491654.jpg">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/changliangqu.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/string.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1356942710_5027.jpg">
+<meta property="og:updated_time" content="2018-07-01T12:22:23.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="C语言_07 内存">
+<meta name="twitter:description" content="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将">
+<meta name="twitter:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1132092356331491654.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -157,178 +163,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/Test/" class="archive-article-date">
-  	<time datetime="2018-06-29T03:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/Test/">Test</a>
+    <h1 class="article-title" itemprop="name">
+      C语言_07 内存
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-29T02:26:04.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2018-06-26T07:41:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
+        
+        <a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
   	<time datetime="2018-03-20T16:10:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/">C语言_07 内存</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性"><a href="#前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性" class="headerlink" title="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性."></a>前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.</h4><h3 id="参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区"><a href="#参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区" class="headerlink" title="参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区."></a>参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.</h3><h4 id="1-四区-栈区-堆区-全局-静态-区-常量-代码-区"><a href="#1-四区-栈区-堆区-全局-静态-区-常量-代码-区" class="headerlink" title="1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区."></a>1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.</h4><h4 id="2-五区-栈区-堆区-全局-静态-区-常量区-代码区"><a href="#2-五区-栈区-堆区-全局-静态-区-常量区-代码区" class="headerlink" title="2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区."></a>2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.</h4><p>其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将最后的那个区分开理解就好. 当然还有一种分四区: 栈区, 堆区, 数据区, 代码区. 将数据区细分为全局(静态)区, 常量区.虽然这样分很好理解,但是并不那么贴切(个人感觉). 来张图片理解一下(随便百度的): 最上面的计算机内核使用的归操作系统,虽然和我们编写程序没什么关系,但是也要了解以下. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1132092356331491654.jpg" alt=""></p>
+<h2 id="内存五区"><a href="#内存五区" class="headerlink" title="内存五区:"></a>内存五区:</h2><h3 id="1-栈区"><a href="#1-栈区" class="headerlink" title="1.栈区:"></a>1.栈区:</h3><p>栈区,是我们最常用到的区域, 因为我们所有的普通局部变量全部存储在这个区.就如我们定义和使用局部变量一样. 在栈区的数据是不需要我们手动去申请和释放内存的. 这个过程全部由编译器帮我们完成,所以我们的局部变量可以直接使用.</p>
+<pre><code>int func(int x, int y){   //传递过来的参数 在栈区
+    int z = x + y;     //函数内部定义的局部变量在栈区
+    return z;
+}
 
-        <div class="article-info info-on-right">
-          
-          
+int main(){
+    int a = 3;    //函数内部定义的局部变量在栈区
+    a += 2;
+    return 0;
+}
+</code></pre><h3 id="2-堆区"><a href="#2-堆区" class="headerlink" title="2.堆区:"></a>2.堆区:</h3><p>堆区,凡是手动malloc realloc calloc, 或者 C++中的new出来的变量都是存储在堆区. 如果学过数据结构或者用过C++的话就会知道, 数据结构中的链表是任意长度的,我们用c实现的话每个节点都是通过malloc函数创建出来的.而C++的话我们new出来的对象都是局部对象, 这些都是我们自己手动申请创建的内存.</p>
+<h4 id="注意-我们手动申请的在堆区的时候-如果我们不手动释放-free-掉这段内存-这段内存会一直占用直到程序结束-手动释放掉内存后切记将该指针置空"><a href="#注意-我们手动申请的在堆区的时候-如果我们不手动释放-free-掉这段内存-这段内存会一直占用直到程序结束-手动释放掉内存后切记将该指针置空" class="headerlink" title="注意: 我们手动申请的在堆区的时候,如果我们不手动释放(free)掉这段内存, 这段内存会一直占用直到程序结束. 手动释放掉内存后切记将该指针置空."></a><em>注意: 我们手动申请的在堆区的时候,如果我们不手动释放(free)掉这段内存, 这段内存会一直占用直到程序结束. 手动释放掉内存后切记将该指针置空.</em></h4><p>当然C++通过new 出来的对象系统会自动调用析构函数释放内存.</p>
+<pre><code>int *func(int x, int y){  //x y, 是在栈区
+
+    int *p = malloc(4);  //p所指向的内存就存放在堆区.
+    *p = x+y;
+    return p;
+}
+
+int main(){
+    int *p = NULL;
+    p = func(3, 5);
+    printf(&quot;%d\n&quot;, *p);
+    free(p); //使用完后释放内存, 并将p置空
+    p = NULL;
+    //后续代码操作
+    return 0;
+}
+</code></pre><h3 id="3-全局-静态-区"><a href="#3-全局-静态-区" class="headerlink" title="3.全局(静态)区:"></a>3.全局(静态)区:</h3><p>全局(静态)区:故名思义,全局变量和静态变量(static)存放的在这个区.这个区域也叫可读写区, 分为.data和.bss两部分, 1 .data段(初始化全局|静态变量), 所有初始化了的全部变量存放的区域.则为数据分配空间，数据保存在目标文件中。 2 .bss段(未初始化全局|静态变量), 所有未初化的全部变量存放的区域.不给该段的数据分配空间，只是记录数据所需空间的大小。 <em>注意: 如果我们定义了一个全部整型变量并赋予了初始值0, 如果我们不给其赋值编译器也会在使用时赋予初始值0, 为了优化会将其放入.bss段, 当作未初始化处理.(看到有人的帖子这样说的,但是我不会验证 TAT!)</em> 附上帖子地址: <a href="http://blog.csdn.net/u010154760/article/details/46552303" target="_blank" rel="noopener">http://blog.csdn.net/u010154760/article/details/46552303</a></p>
+<pre><code>int a;      //全局(静态)区
+//int a = 0;  //据说都是在.bss段
+int b = 2; //全局(静态)区,  .data段
+
+void static fun_sta(){   //这个函数是存放在代码区的. 
+}
+
+void func(){
+    static int a = 0;  //全局(静态)区.  额,这个应该也是在.bss吧.不知道有没有好心人告知一波...
+    static int b = 1; //全局(静态)区.  .data段
+}
+
+int main(){
+    static int a = 3;  //全局(静态)区 .data段
+    return 0;
+}
+</code></pre><h3 id="4-常量区"><a href="#4-常量区" class="headerlink" title="4.常量区:"></a>4.常量区:</h3><p>常量区: (也叫文字常量区)我们在程序中使用的一些整型常量, 浮点型常量, 还有一个很容易误会的字符串常量都是存放在常量区. 举个简单的例子: int a = 4; 我们知道a是存放在栈区的, &amp;a的地址就是栈区的地址, 但是4却是存放在常量区.画图帮助理解. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/changliangqu.png" alt=""> 普通的常量很好理解, 但是字符串有点特殊.举个例子.</p>
+<pre><code>int main(){
+    char *s = &quot;abc&quot;;   //字符串
+    char *s1 = &quot;abc&quot;;   //字符串
+    char s2[] = &quot;abc&quot;;  //字符串数组
+    printf(&quot;%p\n&quot;, s);
+    printf(&quot;%p\n&quot;, s1);
+    printf(&quot;%p\n&quot;, s2);
+    return 0;
+}
+</code></pre><p>输出结果:</p>
+<pre><code>panyiwen@god:~/temp$ ./a.out 
+0x4006b4
+0x4006b4
+0x7ffe50893e90
+</code></pre><p><em>可以看出指针s 和 s1指向的是同一个地址, 而s2和前两个都不同. 原因就是: s 和 s1 都是指向常量区的地址, 常量区只有一个字符串”abc”, 而s2是一个普通的局部变量数组, 那么s2就是存储在栈区的一个字符串</em> 画图理解: <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/string.png" alt=""></p>
+<h3 id="5-代码区"><a href="#5-代码区" class="headerlink" title="5 代码区:"></a>5 代码区:</h3><p>代码区: 故名思义, 所有的代码是存放在这里.而且是编译后的二进制代码.当然这个区是由操作系统直接控制.</p>
+<h4 id="代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区"><a href="#代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区" class="headerlink" title="代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区."></a><em>代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区.</em></h4><p>再放入一张横向图片供参考. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1356942710_5027.jpg" alt=""> 鸣谢: <a href="http://blog.csdn.net/czg13548930186/article/details/52766606" target="_blank" rel="noopener">http://blog.csdn.net/czg13548930186/article/details/52766606</a> <a href="http://blog.csdn.net/androidxiaogang/article/details/50383516" target="_blank" rel="noopener">http://blog.csdn.net/androidxiaogang/article/details/50383516</a> <a href="http://blog.csdn.net/u010672206/article/details/46946593" target="_blank" rel="noopener">http://blog.csdn.net/u010672206/article/details/46946593</a> 希望能让你能有所收获, 不对的地方还请多多指教.</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -341,210 +290,112 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          堆排序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言_06 指针</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" class="archive-article-date">
-  	<time datetime="2018-02-06T10:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2018-02-04T18:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/">C语言03_构造类型  数组, 结构体, 共用体, 枚举类型介绍</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/" class="archive-article-date">
-  	<time datetime="2018-02-04T04:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/">C语言02_基本数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -568,8 +419,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

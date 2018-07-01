@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Archives: 2018 | Pan</title>
+  <title>Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="hello world.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/archives/2018/index.html">
+<meta property="og:url" content="https://ipanyiwen.github.io/page/3/index.html">
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="hello world.">
 <meta property="og:locale" content="default">
@@ -159,391 +159,534 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-04-html-e5-9f-ba-e7-a1-803-css-e5-85-a5-e9-97-a8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-css-e5-85-a5-e9-97-a8/">05 HTML 基础5-CSS-入门</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-css-e5-85-a5-e9-97-a8/" class="archive-article-date">
+  	<time datetime="2018-01-05T07:16:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上一章，我们了解到标签的属性style可以改变标签内容的样式。而写在标签内部的style就是内联式css，同样css也可以写在外面，可以使得一系列的标签呈现同样的样式，节省代码量。下面就来了解下css吧。</p>
+<ul>
+<li><strong>CSS 概述</strong></li>
+<li>CSS 指层叠样式表 (_C_ascading _S_tyle _S_heets)</li>
+<li>样式定义<em>如何显示</em> HTML 元素</li>
+<li>样式通常存储在<em>样式表</em>中</li>
+<li>把样式添加到 HTML 4.0 中，是为了<em>解决内容与表现分离的问题</em></li>
+<li><em>外部样式表</em>可以极大提高工作效率</li>
+<li>外部样式表通常存储在 <em>CSS 文件</em>中</li>
+<li>多个样式定义可_层叠_为一</li>
+</ul>
+<p>css样式分为三种， 内联式<em>css样式</em>、嵌入式<em>css样式</em>、外部式<em>css样式</em>。 1.内联式： 写在标签内部的style中。</p>
+<p style="text-aligin:center;">段落</p>
+
+<p>2.嵌入式：写在style标签中。style标签写在head标签中。指明类型type=“text/css”</p>
+<head><br><title>标题</title><br><br><style type="text/css"><br>p{<br> color:red;<br> text-align:center;<br>}<br></style><br></head>
+
+<p>外部式：CSS代码保存在扩展名为.css的样式表中,HTML文件引用扩展名为.css的样式表</p>
+<head><br><title>标题</title><br><!--链接css文件--><br><link rel="stylesheet" type="text/css" href="./css/style.css"><br></head>
+
+<p><strong>HTML注释：</strong> 如上所示，&lt;!-- 注释内容 –> 用来提示我们下面这段代码是写什么。 <strong>CSS 语法：</strong> CSS 规则由两个主要的部分构成：1、选择器， 2、一条或多条声明。</p>
+<p>selector {<br>  property1:value1;<br>  property2:value2;<br>  property3:value3;<br>}</p>
+<p>相同的属性和值可以组合起来称为选择组合组。例如：h1和p标签的颜色为红色，字体大小为30像素。</p>
+<p>h1,p{color:red; font-size:30px;}</p>
+<p>例子： 在之前的例子将body中的内容字体颜色为红色，背景颜色为灰色，字体设置为华文行楷，宋体，楷体。 浏览器依次查找，如果不支持华文行楷，就会使用宋体，然后是楷体。</p>
+<p>body{<br>  color:red;<br>  background-color:gray;<br>  font-family:华文行楷,宋体,楷体;<br>}</p>
+<p><img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180105145814-300x89.png" alt=""> 那么我在将</p><p>标签的字体颜色该为蓝色呢？是听body内的红色还是</p><p>的蓝色？</p>
+<p>p{color:blue;}</p>
+<p><img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180105150330-300x90.png" alt=""> 结果是听</p><p>的颜色，字体还是body中的华文行楷，这个就得涉及到权值问题, 但是仅这么三种的话易于理解我们可以叫就近原则，听离得最近的。css叫层叠样式表。也就是body内有多个标签</p>
+<body><br> <h1>标题1</h1><br> <p>段落1</p><br> <p>段落2</p><br></body>
+
+<p>body有样式， </p><p>也有样式，如果两者样式重复，看</p><p>自己的样式。如果</p><p>标签在<style>标志中定义了样式，又有个<p>标签在自己的属性style中定义了呢？ 也就是内联式<em>css样式</em>、嵌入式<em>css样式</em>、外部式<em>css样式三者样式重复的关系。没错，__就近原则。内联式  &gt;  嵌入式  &gt;  外部式。</em> 那么问题来了，我又一套样式，不想给所有的<p>使用，但是要给很大一部分<p>使用，在<p>中一个一个写style属性太麻烦，用嵌入式在<style>标签写<p>又不是所有都要改，那么有没有一种方式能够做到呢？ 当然有！我们下节介绍。</p>
+</style></p>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/Test/" class="archive-article-date">
-  	<time datetime="2018-06-29T03:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/Test/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-29T02:26:04.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2018-06-26T07:41:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-css-e5-85-a5-e9-97-a8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-04-html-e5-9f-ba-e7-a1-803-e5-b1-9e-e6-80-a7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
+      <a class="article-title" href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-e5-b1-9e-e6-80-a7/">04 HTML 基础4-属性</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-e5-b1-9e-e6-80-a7/" class="archive-article-date">
+  	<time datetime="2018-01-05T02:57:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这节我们来了解下HTML的属性是什么，在之前我们的<a>标签</a></p>
+<p><a href="http://www.baidu.com" target="_blank" rel="noopener">点击跳转百度</a></p>
+<p>其中的href就是<a>标签的一个属性—href属性。 <strong>HTML属性：</strong> HTML标签可以拥有属性，HTML属性总是以 “键/值” 的形式出现。而且只会在开始标签内出现。 HTML虽然不区分大小写但请务必小写，符合未来趋势！ 写法： name = “value”   值一般用双引号引起，但是单引号也可以。引号也可以重叠使用： name = ‘ I am “xiaoming” !!! ‘此时值为： I am “xiaoming” !!! 常见的HTML属性：</a></p>
+<p>id 唯一标志<br>name 名字<br>style 样式<br>class 类名， 可以有一个或多个， 后面的 css 样式中会介绍</p>
+<p>下面我们就可以写个稍微好看点的HTML：</p>
+<html><br><br><head><br><meta charset="UTF-8"><br><title>hello</title><br></head><br><br><body style="background-color:gray"><br> <br><br><br> <p style="text-align:center">欢迎来到212寝室的网页</p><br> <p><br> </p><p style="text-align:center">welcome to 212 !!!</p><br> <p style="text-align:right">友情链接: <a href="http://www.baidu.com/" target="_blank" rel="noopener">点击跳转到百度!</a></p><br></body><br><br></html>
 
-          
+<p>  看看结果： <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180105103942-300x114.png" alt=""> emmm… 虽然推荐使用utf-8， 今天在windows上用记事本写HTML时发现了一个问题。我在记事本声明了utf-8但是还是乱码，改成GB2312却没有出错。原因应该是windows系统在中国本身是GBK编码。创建的文件就默认为GBK编码了。所以如果用记事本的保存时，文件-另存为，请将编码方式改为utf-8。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180105104939-300x83.png" alt=""> 然后就可以愉快的使用utf-8编码了！！！ 代码解释： style为内嵌样式，大意就是表面上的中文意思，</p>
+<ul>
+<li><br>     换行的一种方式</li>
+<li>background-color        背景颜色，</li>
+<li>text-align                         文本的对齐方式</li>
+</ul>
+<p>其实就是css的范畴了。在后面几章中会详细介绍。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-e5-b1-9e-e6-80-a7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
-  	<time datetime="2018-03-20T16:10:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-03-html-e5-9f-ba-e7-a1-802-e7-bc-96-e7-a0-81" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/">C语言_07 内存</a>
+      <a class="article-title" href="/2018/01/04/03-html-e5-9f-ba-e7-a1-802-e7-bc-96-e7-a0-81/">03 HTML 基础3-编码</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/01/04/03-html-e5-9f-ba-e7-a1-802-e7-bc-96-e7-a0-81/" class="archive-article-date">
+  	<time datetime="2018-01-04T07:41:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>字符编码:</strong> 开玩笑的小故事: 在很久很久以前,有个用英文的国家,他们认为世界只有一种语言,英文,他们的英文就26个字母+大小写+特殊符号+标点+等等  = 127个,一个字节,2^8 = 256个字符远远满足了他们的需求,他们就发明了一种计算机的字符编码方式 — ascii码. 这个时候远在东方的一个国家,他们想把自己的语言也能让计算机识别,就想把中文也加入计算机语言,但是问题来了,中国文化博大精深,就算是256个字符全给中文页表达不完中文,其他国家还扩充剩下的字符128-255全部使用完了, 但是勤劳勇敢而又富有智慧的天国人想到了一个好主意: 分区:将汉字分为94个区, 每个区包含94个字符.比如48区第1个就是’小’字.所以就可以用48 01这两个字节表示.但是48代表了ascii中的数字’0’, 为了区分(避嫌), 我们用48+160, 01+160这两个数字表示就好了.反正ascii才127个,就算扩充我们也有缓冲的余地.</p>
+<pre><code>一个小于127的字符的意义与原来相同，但两个大于127的字符连在一起时，
+就表示一个汉字；前面的一个字节（他称之为高字节）从0xA1用到 0xF7，
+后面一个字节（低字节）从0xA1到0xFE
+</code></pre><p>这样就有大概7000多个汉字可以用了,取名为GB2312,但是问题来了,7000多个字完全不够用呀,于是我们就将汉字扩展开到20000多个,取名GBK.emmm…这下应该够用了吧, 但是我们少数民族的兄弟名字可是有很多不常见的字哦,还有很多方面也需要一些不常见的字,于是勤劳勇敢的天国人民修订了于是又加了几千个少数民族的汉字放入这套编码中,取名为GB18030.  所以GBxxx表示中文是要占用两个字节的. 但如果表示英文的话还是一个字节. 提示: GB也是国标的意思,不只是中文编码在其他方面也会使用. 这些天国人总算可以开心的使用计算机了,这个时候问题又来了,全世界各个国家和地区都使用自己的编码.我们想要愉快的看看邻居岛国人民的网站,但是打开去是一团乱码.这简直阻碍地球大家庭互相交流和发展呀. 于是一个叫做ISO(国际标准化组织)出面了,他们废弃了所有标准,制定了unicode字符集,收录了世界所有字符并给了编号.而UTF-8就是在互联网上使用最广的一种unicode的实现方式(这个发展又是一个很长的故事了)unicode字符集因为收集了全世界各种语言,由于中文字符较多又在比较靠后的位置,所以utf编码需要用三个字符来表示中文.这样全球人民终于可以愉快的统一使用一种编码方式交流了,喜大普奔.故事到此就结束了. 如果想要更加清晰的了解编码方式,可以参考这篇文章: <a href="https://www.zybuluo.com/xiaohaizi/note/897775" target="_blank" rel="noopener">https://www.zybuluo.com/xiaohaizi/note/897775</a> 那么我们回到上个问题,我们的网页默认是ascii编码,问题应该就很清楚了.我们需要指定其编码为UTF-8或者GBK才能显示中文,我们基于交流方便,请务必使用utf-8的编码,方便你我他!!! 那么怎么样指定编码方式呢? 在第一篇文章中我们提到,<head></head>中加载一些网页信息.其中的<meta>标签就有设置字符集的功能.写法:</p>
+<head><br> <meta charset="utf-8"><br> <title>标题</title><br></head>
+
+<p>我们加上后看看内容: <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/1-1-300x284.jpg" alt=""> 这样就可以显示中文了. 也可以写成</p>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<p>解释: http-equiv=”Content-Type” 表示描述文档类型 content=”text/HTML;  文档类型，这里为html,如果JS就是text/javascript， charset=utf-8 页面字符集设为utf-8</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/04/03-html-e5-9f-ba-e7-a1-802-e7-bc-96-e7-a0-81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-02-html-e5-9f-ba-e7-a1-80" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
+      <a class="article-title" href="/2018/01/04/02-html-e5-9f-ba-e7-a1-80/">02 HTML基础2-标签</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/01/04/02-html-e5-9f-ba-e7-a1-80/" class="archive-article-date">
+  	<time datetime="2018-01-04T01:56:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>编辑器:</strong> html代码可以直接用文本编辑器写好html代码, 再用 .html 或者 .htm 格式结尾.然后该文件就变成一个网页. 推荐更加好用的编辑器:DW,联想功能,很多东西直接插入,但是不建议学习时使用那些功能. <strong>基本标签:</strong> </p><h1> 到 <h6>标签:  标题标签, 黑体加粗,字体大小一次变小.  自带换行,可用于不同情况的标题.      如:<h1>大标题!</h1> <h2>中标题</h2>…..<h6>小标题</h6> <p>标签: 段落标签,自带换行,不加粗.用来写正常内容.  如: </p><p>段落</p> <a>标签: 链接标签,用来链接其他网页,可以实现网页之间的跳转, href属性用来标明跳转页面  如:<a href="http://www.baidu.com" target="_blank" rel="noopener">点击跳转百度</a>                                  <a href="./mydir/myweb.html">点击跳转页面</a>   跳转到项目目录下的mydir目录中的myweb.html网页. 标签还可以相互嵌套: (但是嵌套标签请务必不要类似这样使用<p><a></a></p></a>)         <p>友情链接:  <a href="http://www.baidu.com" target="_blank" rel="noopener">百度</a></p> 知道了以上内容,现在就可以写些简单的网页了:<p></p>
+<html><br><head><br><title>hello</title><br></head><br><br><body><br> <h1>wow!</h1><br> <p>this is my first page</p><br> <h2>wow!</h2><br> <p>this is my first page</p><br> <h3>wow!</h3><br> <h4>wow!</h4><br> <h5>wow!</h5><br> <h6>wow!</h6><br> <p>中文</p><br> <p>友情链接: <a href="http://www.baidu.com/" target="_blank" rel="noopener">点击跳转到百度!</a></p><br></body><br><br></html>
+
+<p>保存后看看结果: <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/1-278x300.jpg" alt=""> emmm…… 标题加粗换行, 段落换行,链接点击跳转百度.但是显示的字不是我们想要的结果. 什么原因?   中文编码问题!!! 下章继续. Q:</p><p>标签嵌套<a>标签可以, 那么<a>标签可以嵌套<p>标签呢? <h>标签呢?</h></p>
+</a></a></p></h6></h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/04/02-html-e5-9f-ba-e7-a1-80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-01-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
+      <a class="article-title" href="/2018/01/03/01-html/">01 HTML基础1-简介</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/01/03/01-html/" class="archive-article-date">
+  	<time datetime="2018-01-03T01:02:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>HTML介绍:</strong></p>
+<ul>
+<li>网页的本质就是超级文本标记语言.</li>
+<li>HTML 指的是超文本标记语言 (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage)</li>
+<li>HTML 不是一种编程语言，而是一种<em>标记语言</em> (markup language)</li>
+<li>标记语言是一套<em>标记标签</em> (markup tag)</li>
+<li>HTML 使用<em>标记标签</em>来描述网页</li>
+</ul>
+<p><strong>HTML基本框架:</strong></p>
+<html><br><head><br><title>标题<title><br></title></title></head><br><br><body><br>    主体<br></body><br><br></html>
+
+<p><strong>HTML知识点:</strong> 1. 标签：</p>
+<ul>
+<li>html标签是由一对尖括号组成的</li>
+<li>html标签分为单标签和双标签， 双标签:<html></html><body></body>          <p></p> 单标签：<br> ， 一般是用双标签</li>
+<li>双标签第一个为开始标签，第二个为结束标签。</li>
+</ul>
+<p>2.框架解释：</p>
+<ul>
+<li>浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容，一般我们看到的网页就是放在服务器上的html文档，被网页解读出来就是呈现在我们面前的网页。</li>
+<li><html></html>标签:  告知浏览器此为HTML文档。</li>
+<li><head></head>标签: 定义文档头部，一些css样式脚本，<meta>标签 定义字符集之类的还有title标签必须放在其中，也就是写<head></head>必须写<title></title></li>
+<li><title></title>标签: 定义文档的标题，一般在浏览器的上方页面切换卡显示的文字</li>
+<li><body></body>标签: 定义文档的主体，也就是网站页面显示的所有内容在此定义</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/03/01-html/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" class="archive-article-date">
-  	<time datetime="2018-02-06T10:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-06</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-goodbye-2017" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</a>
+      <a class="article-title" href="/2017/12/31/goodbye-2017/">Goodbye 2017</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2017/12/31/goodbye-2017/" class="archive-article-date">
+  	<time datetime="2017-12-30T16:55:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>GoodBye2017,新的一年马上就要到来!!!</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        			<a href="/categories/未分类//" class="article-tag-list-link color4">未分类</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/31/goodbye-2017/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2018-02-04T18:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/">C语言03_构造类型  数组, 结构体, 共用体, 枚举类型介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/" class="archive-article-date">
-  	<time datetime="2018-02-04T04:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/">C语言02_基本数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
     </nav>
   
 
@@ -567,9 +710,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

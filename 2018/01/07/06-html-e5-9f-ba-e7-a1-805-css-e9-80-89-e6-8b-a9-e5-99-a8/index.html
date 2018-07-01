@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Archives: 2018 | Pan</title>
+  <title>06 HTML 基础6-CSS-选择器 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/archives/2018/index.html">
+  <meta name="description" content="根据上节内容，css可以直接通过标签修改所有该标签样式，我们称这类css的方式为标签选择器，css选择器有多种形式，我们介绍最常用的几种。 css常用选择器 1.  标签(元素)选择器：标签名 { 属性名:属性值 } 用法我们之前已经介绍了。 body {color:yellow;} 2. 类选择器：标签名.类名 {属性名:属性值；属性名:属性值;} ， 该类选择器可以单独使用也可以与其他元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06 HTML 基础6-CSS-选择器">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/01/07/06-html-e5-9f-ba-e7-a1-805-css-e9-80-89-e6-8b-a9-e5-99-a8/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="根据上节内容，css可以直接通过标签修改所有该标签样式，我们称这类css的方式为标签选择器，css选择器有多种形式，我们介绍最常用的几种。 css常用选择器 1.  标签(元素)选择器：标签名 { 属性名:属性值 } 用法我们之前已经介绍了。 body {color:yellow;} 2. 类选择器：标签名.类名 {属性名:属性值；属性名:属性值;} ， 该类选择器可以单独使用也可以与其他元素">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180107010639-300x126.png">
+<meta property="og:updated_time" content="2018-07-01T12:22:23.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="06 HTML 基础6-CSS-选择器">
+<meta name="twitter:description" content="根据上节内容，css可以直接通过标签修改所有该标签样式，我们称这类css的方式为标签选择器，css选择器有多种形式，我们介绍最常用的几种。 css常用选择器 1.  标签(元素)选择器：标签名 { 属性名:属性值 } 用法我们之前已经介绍了。 body {color:yellow;} 2. 类选择器：标签名.类名 {属性名:属性值；属性名:属性值;} ， 该类选择器可以单独使用也可以与其他元素">
+<meta name="twitter:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180107010639-300x126.png">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -157,394 +160,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-06-html-e5-9f-ba-e7-a1-805-css-e9-80-89-e6-8b-a9-e5-99-a8" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      06 HTML 基础6-CSS-选择器
+    </h1>
+  
+
+        
+        <a href="/2018/01/07/06-html-e5-9f-ba-e7-a1-805-css-e9-80-89-e6-8b-a9-e5-99-a8/" class="archive-article-date">
+  	<time datetime="2018-01-06T17:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  根据上节内容，css可以直接通过标签修改所有该标签样式，我们称这类css的方式为标签选择器，css选择器有多种形式，我们介绍最常用的几种。 <strong>css常用选择器</strong> 1.  标签(元素)选择器：标签名 { 属性名:属性值 } 用法我们之前已经介绍了。</p>
+<p>body {color:yellow;}</p>
+<p>2. 类选择器：标签名.类名 {属性名:属性值；属性名:属性值;} ， 该类选择器可以单独使用也可以与其他元素一起使用。比如我们想把不同的</p><p>换成不同的颜色。类选择器还能调用多个，空格隔开。举个栗子：</p>
+<p>写法：<br>p.white{color:white;}<br>p.red{color:red;}<br>也可以写成：<br>.white{color:white;}<br>.red{color:red;}<br>.center{text-align:center}<br>调用方法：</p>
+<p class="white">欢迎来到212寝室的网页</p><br><p class="center red">welcome to 212!!!</p><br>两者区别在与第一种只能<p>标签使用，第二种可以在其他标签中使用。<br>第一个</p><p>标签字体颜色变为白色，默认在网页最左边。<br>第二个</p><p>标签字体颜色变为红色，字体居中。<br><br>3. id选择器：#名称 {属性名:属性值；}用法与类选择器类似，不过调用的属性为id,由于使用和类选择器一致,但是id为唯一标识符,能不使用,尽量不要使用,因为写后台或者js代码很有可能需要id选择器.<br><br>写法：<br>#f1{text-align:center; color:red;}<br>调用方法：<br></p><p id="f1">欢迎</p>
+
+<p>4.派生选择器：标签1 标签2{属性名:属性值；}，这种写法只对标签1中的标签2的样式进行修改，对单独的标签1和标签2都不会起作用。</p>
+<p>写法：<br>p a{font-size:30px; color:red;}<br>起效果：</p>
+<p></p><p>友情链接:<a href="#">点击跳转本页面</a></p><br>不起效果：<p></p>
+<p></p><p>你好!</p><br><a href="#">我是链接</a><p></p>
+<p>5.伪类选择器：伪类对象在文档中并不存在，它们指定的是元素的某种状态。应用最广的是<a>标签的四个状态——未链接状态(a:link),已经访问过的链接(a:visited),鼠标悬停状态(a:hover),鼠标按住状态(a:active)。 举个栗子：将链接颜色改为红色，下划线的样式改为无下划线。</a></p>
+<p>a:link{color:red; text-decoration:none;}</p>
+<p>  好，学了css的选择器我们就可以再次美化我们之前的简单界面了； 小提示:css的使用的大小写不敏感,class=”F1” class=”f1”都会去找f1或者F1如果都有两个都会找,先找class内使用的那个.但是不推荐这样使用!!!因为js中对id是区分大小写的,其他html文档混合时也会出现问题,所以最好是写成一样的.容易理解也不容易犯错.</p>
+<html><br><head><br><br><meta charset="UTF-8"><br><title>hello</title><br><style type="text/css"><br><br>body{<br> color:red;<br> background-color:yellow;<br> font-size:25px;<br> font-family:华文行楷,宋体,楷体;<br>}<br>.center{text-align:center;}<br>p.white{color:white;}<br>p.blue{color:blue;}<br>p a:link{color:green;text-decoration:none;}<br>#f1{<br> color:green;<br> font-family:楷体;<br> font-size:20px;<br> text-align:right;<br>}<br></style><br></head><br><br><body><br> <br><br><br> <p class="center white">欢迎来到212寝室的网页</p><br> <p class="center blue">welcome to 212 !!!</p><br> <p id="f1">友情链接: <a href="http://www.baidu.com/" target="_blank" rel="noopener">点击跳转到百度!</a></p><br></body><br><br></html>
+
+<p>效果： <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180107010639-300x126.png" alt=""></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/Test/" class="archive-article-date">
-  	<time datetime="2018-06-29T03:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/Test/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-29T02:26:04.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2018-06-26T07:41:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/01/07/06-html-e5-9f-ba-e7-a1-805-css-e9-80-89-e6-8b-a9-e5-99-a8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/01/14/07-html-e5-9f-ba-e7-a1-806-css-e4-b8-89-e5-a4-a7-e7-89-b9-e6-80-a7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          07 HTML 基础7-CSS-三大特性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/05/04-html-e5-9f-ba-e7-a1-803-css-e5-85-a5-e9-97-a8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">05 HTML 基础5-CSS-入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
-  	<time datetime="2018-03-20T16:10:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/">C语言_07 内存</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" class="archive-article-date">
-  	<time datetime="2018-02-06T10:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2018-02-04T18:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/">C语言03_构造类型  数组, 结构体, 共用体, 枚举类型介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/" class="archive-article-date">
-  	<time datetime="2018-02-04T04:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/">C语言02_基本数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -568,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

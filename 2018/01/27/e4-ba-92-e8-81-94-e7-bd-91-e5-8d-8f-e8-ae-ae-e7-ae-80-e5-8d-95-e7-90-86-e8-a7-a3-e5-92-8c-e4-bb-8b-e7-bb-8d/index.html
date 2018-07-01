@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Archives: 2018 | Pan</title>
+  <title>互联网协议-简单理解和介绍 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/archives/2018/index.html">
+  <meta name="description" content="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，http://www.baidu.com/ 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="互联网协议-简单理解和介绍">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/01/27/e4-ba-92-e8-81-94-e7-bd-91-e5-8d-8f-e8-ae-ae-e7-ae-80-e5-8d-95-e7-90-86-e8-a7-a3-e5-92-8c-e4-bb-8b-e7-bb-8d/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，http://www.baidu.com/ 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/7bf4e8201ee0799d2770a37ed41232eb.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052904.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/8ad4b31c8701a18be9fc814f9e2f07082838fe9f.jpg">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052910.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052912.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180127161219.png">
+<meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052913.png">
+<meta property="og:updated_time" content="2018-07-01T12:22:23.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="互联网协议-简单理解和介绍">
+<meta name="twitter:description" content="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，http://www.baidu.com/ 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机">
+<meta name="twitter:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/7bf4e8201ee0799d2770a37ed41232eb.png">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -157,394 +166,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-e4-ba-92-e8-81-94-e7-bd-91-e5-8d-8f-e8-ae-ae-e7-ae-80-e5-8d-95-e7-90-86-e8-a7-a3-e5-92-8c-e4-bb-8b-e7-bb-8d" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      互联网协议-简单理解和介绍
+    </h1>
+  
+
+        
+        <a href="/2018/01/27/e4-ba-92-e8-81-94-e7-bd-91-e5-8d-8f-e8-ae-ae-e7-ae-80-e5-8d-95-e7-90-86-e8-a7-a3-e5-92-8c-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
+  	<time datetime="2018-01-27T08:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><a href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。" class="headerlink" title="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"></a><strong>概念</strong>：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</h1><p>前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机的。</p>
+<h1 id="一、-五层模型。"><a href="#一、-五层模型。" class="headerlink" title="一、 五层模型。"></a><strong>一、 五层模型。</strong></h1><p>互联网的模型有7层模型， 4层模型的说法，5层模型是结合这两种更加利于理解的一种说法。5层模型从上往下分别是：应用层，传输层，网络层，数据链路层，物理层。（名词可能会有点出入，翻译问题） <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/7bf4e8201ee0799d2770a37ed41232eb.png" alt=""></p>
+<h2 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a><strong>1.物理层</strong></h2><p>物理层就是最底层的电路之间的传输，不同的电脑与电脑之间相互通过网线，WiFi等，构建起了整个互联网的基础。</p>
+<h2 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a><strong>2.数据链路层</strong></h2><p>互联网的电脑数不胜数，我们两台电脑之间怎么相互连接，传递数据呢？首先就需要将电脑相互区分——MAC地址，然后传递数据需要单位吧，不然一堆0101传递过去计算机接受了也无法识别那部分属于什么应用程序的，当时不同得企业选择不同的单位，不同的风格，然后渐渐统一，出现了互联网的一个重要协议 ——以太网协议， 规定数据单位为：帧。</p>
+<h3 id="2-1-MAC地址"><a href="#2-1-MAC地址" class="headerlink" title="2.1 MAC地址"></a><strong>2.1 MAC地址</strong></h3><p>链接网络需要网卡，每台计算机的网卡地址就是MAC地址，每块网卡出厂的MAC地址独一无二。这样每台计算机就有了个独一无二的身份了。</p>
+<h3 id="2-2-以太网协议"><a href="#2-2-以太网协议" class="headerlink" title="2.2 以太网协议"></a><strong>2.2 以太网协议</strong></h3><p>以太网协议规定了网络数据传输过去的单位是一帧， 两台计算机之间的MAC地址也必须储存在帧中，所以一帧又分为标头(Head)和数据(Data)两部分。 标头(Head)存放两台计算机的MAC地址， 数据部分(Data)存放需要传输的数据。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052904.png" alt=""></p>
+<h3 id="2-3-广播"><a href="#2-3-广播" class="headerlink" title="2.3 广播"></a><strong>2.3 广播</strong></h3><p>现在发送方知道了接收方是谁，也就是网络IP（域名），数据也写成帧的形式，那么怎么确定在众多电脑中哪台是接收方呢？以太网的方式非常简单——广播，给所有的计算机都发送数据，让其他计算机自己判断，其他计算机接受到了数据，判断是不是自己，不对就将其抛弃，对就将自己的MAC地址发送回去。具体的实现——ARP协议（在网络层介绍）</p>
+<h2 id="3-网络层"><a href="#3-网络层" class="headerlink" title="3.网络层"></a><strong>3.网络层</strong></h2><p>广播技术理论上是能成立的。但是互联网的众多计算机中，用广播的方式给每台计算机发送一个数据包明显不现实。但是我们又需要知道对方计算机的MAC地址传输数据。那么就需要缩小范围，如果是在同一子网中的计算机，用广播的方式就能够实现。所以网络层提出了一个新的概念——IP。</p>
+<h3 id="3-1-IP协议"><a href="#3-1-IP协议" class="headerlink" title="3.1 IP协议"></a><strong>3.1 IP协议</strong></h3><p>每台计算机分配一个ip地址，目前广泛使用的是第四版，称为IPV4。由32位二进制组成，为了方便理解，我们分为四段十进制数从0.0.0.0到255.255.255.255，假设前24位为网络部分，后8位为主机部分。假设我们有一个ip地址为：192.168.0.123，那么192.168.0.*  ， 都为同一子网。该子网最多为2^8=256台， 如何确定多少位是网络多少位是主机呢？——子网掩码。</p>
+<h3 id="3-2-子网掩码"><a href="#3-2-子网掩码" class="headerlink" title="3.2 子网掩码"></a><strong>3.2 子网掩码</strong></h3><p>1&amp;1 = 1, 1&amp;0=0, 0&amp;0 = 0。 假设24位为网络部分，那么子网掩码为:1111 1111. 1111 1111.1111 1111.0000 0000 = 255.255.255.0, ip1 和ip2 两个ip是否在同一子网呢？ ip1 &amp; 子网掩码 == ip2&amp; 子网掩码，那么就是在同一子网。192.168.0.123&amp;255.255.225.0 = 192.168.0.0。</p>
+<h3 id="3-3-网关-gateway-和ARP协议"><a href="#3-3-网关-gateway-和ARP协议" class="headerlink" title="3.3  网关(gateway)和ARP协议"></a><strong>3.3  网关(gateway)和ARP协议</strong></h3><p>我们已知ip地址，那么就会碰到两种情况： 1.不在同一子网: 发送方将数据交给自己的网关，网关再去找到接受方ip的网关，然后就是在同一子网的情况了。 2.在同一子网:根据ARP协议，用广播的方式发送给接收方，接收方回应后得到接收方的MAC地址。 网关：网关实质上是一个网络通向其他网络的IP地址，有兴趣可以去查看一下DHCP服务器的实现原理。给一张百度的图片来理解： <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/8ad4b31c8701a18be9fc814f9e2f07082838fe9f.jpg" alt=""> ARP协议：地址解析协议，即ARP（Address Resolution Protocol），是根据IP地址获取MAC地址的一个TCP/IP协议。主机发送信息时将包含目标IP地址的ARP请求广播到该子网的网络上的所有主机，所有主机确认该IP是否是自己本身，不是则抛弃该信息，是的话接收返回自身的MAC地址，以此确定目标的物理地址。</p>
+<h3 id="3-4-IP数据包"><a href="#3-4-IP数据包" class="headerlink" title="3.4  IP数据包"></a><strong>3.4  IP数据包</strong></h3><p>根据以太网协议，数据包的单位为：帧： head+data， head中存放了MAC地址，但是我们又需要ip地址才能查找到。所以我们将数据部分继续拆分为head+data。head中存放ip地址。所以一帧数据变成了：head+head+data。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052910.png" alt=""></p>
+<h2 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4  传输层"></a><strong>4  传输层</strong></h2><p>我们已经知道ip和mac地址，我们可以准确的找到我们需要发送数据的那台计算机，但是计算机接受了数据怎么判断数据是交给哪个应用的呢？网上听歌和看电影那么传送过来的数据是歌曲应用的还是电影应用的呢？ ——端口。</p>
+<h3 id="4-1-端口："><a href="#4-1-端口：" class="headerlink" title="4.1 端口："></a><strong>4.1 端口：</strong></h3><p>计算机可以选择0到65535个端口，正好16个二进制位。0到1023的端口被系统占用，用户程序可以在1024~65535端口之间选择一个。用户计算机端口与服务器计算机端口相连接，然后就可以传输数据了。</p>
+<h3 id="4-2-UDP、-TCP-协议"><a href="#4-2-UDP、-TCP-协议" class="headerlink" title="4.2 UDP、**TCP**协议"></a><strong>4.2 UDP、**</strong>TCP<strong>**协议</strong></h3><p>如你所料，端口号当然也是要保存到数据包中，所以就有了UDP协议和TCP协议。UDP和TCP协议也同样继续将data分为head和data。head中存放端口号信息。 UDP协议：几乎就是简单的将端口号放入head中，数据没有安全保障，也容易丢包，但是传输速度非常快。比较适合语音，视频这类数据传播。 TCP协议：比较安全的将一些信息放入head中，通过协议不会丢包，通过三次握手保证信息的安全。是比较安全的一种协议。但是因为安全所以传输速度较慢。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052912.png" alt=""> 这时候一帧数据就变成了上面这样。 了解了上面的内容也许就能对ip地址有了一定的了解了，下面的图片应该看得懂了，DNS是将域名转化为IP地址一台服务器计算机。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180127161219.png" alt=""></p>
+<h2 id="5-应用层"><a href="#5-应用层" class="headerlink" title="5.应用层"></a><strong>5.应用层</strong></h2><p>不同的应用需要的数据都是不同的，向FTP传输数据格式，和邮件传输通过SMTP格式。应用层就是这些数据格式的协议组成的。为用户提供各种服务。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052913.png" alt=""></p>
+<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a><strong>总结：</strong></h1><p>物理层：构成互联网基础，使得所有计算机能够物理连接在一起。 数据链路层：以太网协议，数据分为帧传递。Head存放计算机的MAC地址 网络层：IP协议，数据再次细分，Head存放计算机的ip地址 传输层：TCP或UDP协议，数据再细分， 确定数据端口。Head存放了端口号。 应用层：处理数据，为应用提供服务，使得用户能够明白和使用。</p>
+<h1 id="我的简单理解："><a href="#我的简单理解：" class="headerlink" title="我的简单理解："></a><strong>我的简单理解：</strong></h1><p>我的IP为192.168.0.111 ——&gt;浏览器访问 <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a>  , 通过域名解析(DNS)为 115.239.211.112， 通过子网掩码255.255.255.0 发现我的IP和百度的IP不在同一子网，所以本机发送一个数据包【（本机MAC地址，不知百度MAC地址），（本机的IP地址， 百度的IP地址）（TCP请求的端口）（请求正文）】的请求提交给网关(gateway)，网关去找到115.239.211.112。然后百度的服务器返回一个MAC地址。通过tcp协议三次握手建立连接。 致谢：<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html" target="_blank" rel="noopener">阮一峰的网络日志</a> 以上内容参考至阮一峰网络日志，需要更加详细了解可以去看看。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/Test/" class="archive-article-date">
-  	<time datetime="2018-06-29T03:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/Test/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-29T02:26:04.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2018-06-26T07:41:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/网络//" class="article-tag-list-link color3">网络</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/01/27/e4-ba-92-e8-81-94-e7-bd-91-e5-8d-8f-e8-ae-ae-e7-ae-80-e5-8d-95-e7-90-86-e8-a7-a3-e5-92-8c-e4-bb-8b-e7-bb-8d/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/01/29/e7-ac-94-e8-ae-b0-ef-bc-9ajsp-e7-9a-84-e4-b9-9d-e5-a4-a7-e5-86-85-e7-bd-ae-e5-af-b9-e8-b1-a1-e5-92-8c-e5-9b-9b-e5-a4-a7-e4-bd-9c-e7-94-a8-e5-9f-9f/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          笔记：jsp的九大内置对象和四大作用域
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/25/e7-ac-94-e8-ae-b0-ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔记: AJAX</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
-  	<time datetime="2018-03-20T16:10:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/">C语言_07 内存</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" class="archive-article-date">
-  	<time datetime="2018-02-06T10:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2018-02-04T18:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/">C语言03_构造类型  数组, 结构体, 共用体, 枚举类型介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/" class="archive-article-date">
-  	<time datetime="2018-02-04T04:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/">C语言02_基本数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -568,8 +375,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

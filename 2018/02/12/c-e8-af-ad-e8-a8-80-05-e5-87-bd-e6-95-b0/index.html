@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Archives: 2018 | Pan</title>
+  <title>C语言_05 函数详解 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/archives/2018/index.html">
+  <meta name="description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言_05 函数详解">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-01T12:22:23.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="C语言_05 函数详解">
+<meta name="twitter:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -157,254 +158,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/Test/" class="archive-article-date">
-  	<time datetime="2018-06-29T03:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/Test/">Test</a>
+    <h1 class="article-title" itemprop="name">
+      C语言_05 函数详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-29T02:26:04.554Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" class="archive-article-date">
-  	<time datetime="2018-06-26T07:41:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/" class="archive-article-date">
-  	<time datetime="2018-03-20T16:10:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/">C语言_07 内存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
+        
+        <a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
   	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
+<p>“函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。</p>
+</blockquote>
+<h2 id="函数的写法"><a href="#函数的写法" class="headerlink" title="函数的写法"></a>函数的写法</h2><pre><code>返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写
+{
+    //函数体
+    ....
+    return 返回类型; //如果返回类型为void 可以没有return.
+}
+</code></pre><h2 id="main函数"><a href="#main函数" class="headerlink" title="main函数"></a>main函数</h2><p>每个C语言程序至少有一个函数,我们常常用main()函数, 也称之为主函数, 但是C语言的程序的主函数是不是一定叫main呢? 答案当然是否定的, 操作系统在执行main函数之前, 调用了其他代码, 这些代码就有初始化main函数所需的运行环境,而负责初始化main函数的这个函数就称之为入口函数/入口点.而入口函数规定的C程序的主函数就是main, 那么我们当然可以找到这个文件,修改主函数名.</p>
+<h3 id="main函数的返回值"><a href="#main函数的返回值" class="headerlink" title="main函数的返回值"></a>main函数的返回值</h3><p>main函数的返回值一般有两种写法 1.<code>void main</code>2.<code>int main</code> 但是这前者最好不要使用, 不仅仅是有些编译器不支持.还因为操作系统对于一个程序的正常或者执行异常都是整型,如果程序返回 0 表示程序正常执行, 如果返回其他整型,执行异常.那么可以说<code>void main</code>就是一种不恰当的写法. int main的返回值为0或者不为0的程序的执行结果其实都一样,但为什么一定要返回0呢? 举个例子:</p>
+<pre><code>//test.c
+    #include &lt;stdio.h&gt;
 
-        <div class="article-info info-on-right">
-          
-          
+    int main(){
+        printf(&quot;hello &quot;);
+        return 0;
+    }
+
+
+//test1.c
+    #include &lt;stdio.h&gt;
+
+    int main(){
+        printf(&quot;world!\n&quot;);
+        return 0;
+    }
+
+
+执行test 和 test1 &amp;&amp;运算符是指执行成功&amp;&amp;前面的便执行后面的, 如果执行前面失败,后面便不会执行.
+
+
+panyiwen@god:~/temp$ ./test &amp;&amp; ./test1
+hello world!
+</code></pre><p>如果我们将第一个test.c的返回值改为<code>return 1;</code>执行结果:</p>
+<pre><code>panyiwen@god:~/temp$ ./test &amp;&amp; ./test1
+hello panyiwen@god:~/temp$
+</code></pre><p>只输出hello , 没有world和换行.也就是第二个test1.c没有执行.原因便是第一个程序的返回值是1,系统认为该程序没有执行成功.所以不会执行第二个test1</p>
+<h3 id="main函数的三种写法-两种"><a href="#main函数的三种写法-两种" class="headerlink" title="main函数的三种写法(两种)"></a>main函数的三种写法(两种)</h3><h4 id="1-int-main-void-括号中的void可以不写"><a href="#1-int-main-void-括号中的void可以不写" class="headerlink" title="1.int main(void) //括号中的void可以不写"></a>1.<code>int main(void) //括号中的void可以不写</code></h4><h4 id="2-int-main-int-argc-char-argv"><a href="#2-int-main-int-argc-char-argv" class="headerlink" title="2.int main(int argc, char *argv[])"></a>2.<code>int main(int argc, char *argv[])</code></h4><h4 id="3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展"><a href="#3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展" class="headerlink" title="3.int main(int argc, char *argv[], char *envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展"></a>3.<code>int main(int argc, char *argv[], char *envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展</code></h4><p>其实也就是main函数中可以不写参数, 写两个参数, 写三个参数. 因为是参数,所以名称可以自己取,也可以就用上述名称.</p>
+<h4 id="三个参数"><a href="#三个参数" class="headerlink" title="三个参数"></a>三个参数</h4><ol>
+<li><code>int argc</code> 整型参数, argc = 1+输入的参数个数, 系统自动赋值, 无需我们写, 1 为程序的名称.</li>
+<li><code>char *argv[]</code> 字符串数组, argv[0] 表示程序的名称, argv[1]~argv[argc-1]代表我们传入的参数.</li>
+<li><code>char *envp[]</code> 字符串数组, 表示系统的环境变量</li>
+</ol>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h4><p>#include &lt;stdio.h&gt;<br>    int main(int argc, char *argv[], char *envp[]){<br>        int i;<br>        printf(“%d\n\n”, argc);<br>        for (i = 0; i &lt; argc; i++){<br>            printf(“%s\n”, argv[i]);<br>        }<br>        printf(“\n”);<br>        for (i = 0; envp[i] != NULL; i++){<br>            printf(“%s\n”, envp[i]);<br>        }<br>        return 0;<br>    }</p>
+<p>我们执行这段程序, 并输入参数hello world, 部分输出结果, 因为系统环境变量太多.</p>
+<pre><code>panyiwen@god:~/temp$ ./test hello world
+3
+
+./test hello world
+
+XDG_VTNR=7 XDG_SESSION_ID=c2 CLUTTER_IM_MODULE=xim XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/panyiwen GPG_AGENT_INFO=/home/panyiwen/.gnupg/S.gpg-agent:0:1 SHELL=/bin/bash TERM=xterm-256color ...
+</code></pre><p>我们可以看到, argc = 3 执行的程序名称+两个参数 argv = {“./test”, “hello”, “world”}; 而envp则全是系统环境变量key=value的字符串. 那么我们知道系统环境变量有什么用? 我们可以得到环境变量配置的一些参数来完成我们需要的功能,但是不建议推荐使用第三个参数传入,因为拓展性不强, 我们可以通过C语言的<code>#include &lt;stdlib.h&gt;</code>库中的函数来得到和设置删除系统环境变量.这样在不同系统上的使用方式就是一致的.</p>
+<h2 id="库函数"><a href="#库函数" class="headerlink" title="库函数"></a>库函数</h2><blockquote>
+<p>C语言库函数是把自定义函数放到库里，是别人把一些常用到的函数编完放到一个文件里，供程序员使用。程序员用的时候把它所在的文件名用#include&lt;&gt;加到里面就可以了（尖括号内填写文件名），例如<code>#include &lt;math.h&gt;</code>。</p>
+</blockquote>
+<p>库函数也就是一些程序员大牛们,他们将一些我们常用的函数,写到文件里面供我们调用,每次计算机语言的更新,除了一些语法的更新外,很多也是加入一些别的优秀的代码文件加入库中. 说到库函数,我们就不得不提<code>#include &lt;stdio.h&gt;</code> 我们平常写的几乎所有的C程序的开头都会加上这么一句,标准输入输出.那么我们就来介绍以下stdio.h.</p>
+<h3 id="stdio-h"><a href="#stdio-h" class="headerlink" title="stdio.h"></a>stdio.h</h3><blockquote>
+<p>stdio 就是指 “standard input &amp; output”（标准输入输出） 所以，源代码中如用到标准输入输出函数时，就要包含这个头文件！</p>
+</blockquote>
+<h5 id="引用方法-include-lt-stdio-h-gt"><a href="#引用方法-include-lt-stdio-h-gt" class="headerlink" title="引用方法: #include &lt;stdio.h&gt;"></a>引用方法: <code>#include &lt;stdio.h&gt;</code></h5><hr>
+<blockquote>
+<p>stdio.h所包含的函数： 文件访问: fopen,freopen,fflush,fclose 二进制输入/输出: fread, fwrite 非格式化输入/输出: fgetc/getc, fputc/putc, ungetc, fgets ,fputs 格式化输入/输出: scanf/fscanf/sscanf ,printf/fprintf/sprintf, perror 文件定位: ftell, fseek, fgetpos ,fsetpos, rewind 错误处理: feof, ferror 文件操作: remove, rename, tmpfile</p>
+</blockquote>
+<p>大名鼎鼎的EOF 也是宏定义在stdio.h中, 一般编译器定义是: <code>#define EOF -1</code>, 我们常用的scanf, printf 函数都是写在stdio.h中.</p>
+<h3 id="scanf函数和printf函数"><a href="#scanf函数和printf函数" class="headerlink" title="scanf函数和printf函数:"></a>scanf函数和printf函数:</h3><blockquote>
+<p>用 法: int scanf(char *format[,argument,…]); 用 法: int printf(“&lt;格式化字符串&gt;”, &lt;参量表&gt;);</p>
+</blockquote>
+<p>我们知道scanf是格式化输入, 调用此函数,我们在计算机的键盘中输入的字符串会传化为相对应的格式,储存到变量中, 并返回一个整数,代表成功输入了多少个. printf是格式化输出, 输出内容到显示器(终端) 返回值是输出字符的个数，若出错，则返回负数。 . 例子:</p>
+<pre><code>int num = scanf(&quot;%f %d&quot;, &amp;a, &amp;b);
+printf(&quot;a=%f, b=%d, num = %d\n&quot;, a, b, num);
+</code></pre><p>分析:上面的例子,如果我们正常输入<code>11.2 2</code>,那么函数就会返回一个2表示我们输入成功输出<code>a=11.200000, b=2, num=2</code>, 如果我们输入<code>11.2 a</code>那么就会将11.2 赋值给 a, 但是’a’无法赋值给b, 输入就会失败, 输出<code>a=11.200000, b=517694128, num=1</code>b被随机赋予了一个值, 成功输入一个.如果是<code>a 11</code>那么返回值就是0了,a,b都会被随机赋值. 小知识: 我们知道一个变量是要在内存中开辟一段内存的, 变量储存的值是储存在内存中, &amp;为取地址符,我们要存值, 必须知道变量的地址. 我们平时用的a 其实是 <em>&amp;a 先取出地址再得到内存中的值, 为了方便将</em>&amp;省略. 但是如果用的多的人就会发现scanf有一些很神奇的事情发生,举几个例子:</p>
+<pre><code>scanf(&quot;%d %lf&quot;, &amp;a, &amp;b);
+scanf(&quot;%s&quot;, ch);
+scanf(&quot;%d%c&quot;,&amp;a, &amp;c);
+</code></pre><p>我们对其输出, 第一个我们输入<code>11.234 12.3</code>,结果: <code>a=11 b=0.234000</code> 第二个我们输入<code>Hello World !!!</code>, 结果: <code>Hello</code> 第三个我们输入<code>16 c</code>, 结果:<code>a=16 c=&#39; &#39;</code> 我们其实明白scanf输入浮点型给整型会被强制转换, 字符串%s是不能接受空格的, 如果我们没有规定分隔符是什么,一般默认是空格, 但是输入的空格会被%c接收,所以c=’ ‘,等等很多有意思的点, 那么我们就来看看这个理由吧.先引入点知识点:</p>
+<h3 id="stdin-stdout-stderr的简单介绍"><a href="#stdin-stdout-stderr的简单介绍" class="headerlink" title="stdin, stdout, stderr的简单介绍:"></a>stdin, stdout, stderr的简单介绍:</h3><p>1.stdin, 标准输入流: 通常是键盘输入. 2.stdout, 标准输出流: 输出到屏幕. 3.stderr, 标准错误流: 无缓冲.输出到屏幕. 一般是错误信息. 全缓冲: 直到文件结束或者手动清空缓存,才清空缓冲. 行缓冲: 遇到回车或者换行, 或者文件结束, 清空缓冲</p>
+<blockquote>
+<p>ISO C规定： 当且仅当stdin和stdout不指向交互式设备时，他们才是全缓冲。 stderr决不会是全缓冲。 Linux系统默认： stderr是不带缓冲的。 若流指向终端设备，则是行缓冲，否则为全缓冲。</p>
+</blockquote>
+<p><strong>所以在c语言中stdin和stdout是行缓冲, 我们的scanf和printf函数就是使用了stdin和stdout, 而stdin和stdout就是写在stdio中的.本质就是系统帮我们打开了两个文件句柄. 我们输入的数据就储存在stdin那个文件中, 输出的数据就存储在stdout文件中, 我们调用scanf和printf就是在文件中取数据, 进行输入和输出.</strong> 第一个例子<code>scanf(&quot;%d %lf&quot;, &amp;a, &amp;b);</code> 我们就是从缓冲区stdin 也就是字符串取出<code>11</code> 赋值给a 取出<code>.234</code>赋值给b. 所有有关这些奇特的现象就是和stdin和stdout有关. <strong>scanf 也就是 int fscanf(stdin, const char *format, [argument…]); 遇到换行或空格结束</strong> <strong>printf 也就是int fprintf( stdout, const char *format, [ argument ]…);</strong> 其他的库函数也就是大同小异,主要是知道怎么用的就好.</p>
+<h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><p><strong>在库函数不满足我们的需求的时候, 我们又不想把所有代码都写在主函数里面, 那样不仅丑,而且可读性,复用性都很差.那么我们就需要自定义函数,来满足我们的需要</strong> 写法和main函数一样</p>
+<pre><code>返回值类型 函数名(参数1, 参数2 ...)//可不写
+{
+    //函数体
+    ...
+    return 返回值;
+}
+</code></pre><p>举个例子, 比大小, 返回最大值:(虽然库函数中有)</p>
+<pre><code>int max(int a, int b){
+    return a &gt; b ? a : b;   //三目运算符 等价与 if(a &gt; b) {return a;} else{ return b;}
+}
+
+int main(){
+    int a = 100, b = 120;
+    int maxnum;
+    maxnum = max(a, b); //调用max函数 返回两个数最大的那个
+    return 0;
+}
+</code></pre><p>C语言中需要注意的是函数要么写在执行前面, 要么是需要声明(告诉计算机有这个函数), 要不然找不到. 也就是掉个位置:</p>
+<pre><code>int main(){
+    int a = 100, b = 120;
+    int maxnum;
+    int max(int, int);  //使用前需要声明有这个函数  只要使用前声明就好,也就是可以写在int main()的上面也可以.
+    maxnum = max(a, b); //调用max函数 返回两个数最大的那个
+    return 0;
+}
+
+int max(int a, int b){
+    return a &gt; b ? a : b;   //三目运算符 等价与 if(a &gt; b) {return a;} else{ return b;}
+}
+</code></pre><p>声明也就是告诉计算机,如果在这之前没找到这个函数没关系,先别报错,我的函数在下面. 友情链接: <a href="http://blog.csdn.net/Crazy_Tengt/article/details/72717144" target="_blank" rel="noopener">http://blog.csdn.net/Crazy_Tengt/article/details/72717144</a> <a href="http://blog.csdn.net/q565220/article/details/49951885" target="_blank" rel="noopener">http://blog.csdn.net/q565220/article/details/49951885</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -417,134 +332,112 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" class="archive-article-date">
-  	<time datetime="2018-02-06T10:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-06</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C语言_06 指针
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/06/c-e8-af-ad-e8-a8-80-04-e4-b8-89-e7-a7-8d-e7-a8-8b-e5-ba-8f-e7-bb-93-e6-9e-84-e9-a1-ba-e5-ba-8f-e9-80-89-e6-8b-a9-e5-88-86-e6-94-af-e5-be-aa-e7-8e-af-e7-bb-93-e6-9e-84/">C语言_04 三种程序结构 顺序, 选择(分支), 循环结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2018-02-04T18:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/05/c-e8-af-ad-e8-a8-8003-e6-9e-84-e9-80-a0-e7-b1-bb-e5-9e-8b-e6-95-b0-e7-bb-84-e7-bb-93-e6-9e-84-e4-bd-93-e5-85-b1-e7-94-a8-e4-bd-93-e6-9e-9a-e4-b8-be-e7-b1-bb-e5-9e-8b-e4-bb-8b-e7-bb-8d/">C语言03_构造类型  数组, 结构体, 共用体, 枚举类型介绍</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/" class="archive-article-date">
-  	<time datetime="2018-02-04T04:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/04/c-e8-af-ad-e8-a8-8002-e5-9f-ba-e6-9c-ac-e6-95-b0-e6-8d-ae-e7-b1-bb-e5-9e-8b/">C语言02_基本数据类型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -568,8 +461,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
