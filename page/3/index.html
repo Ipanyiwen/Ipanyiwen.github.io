@@ -541,21 +541,15 @@
 <li>HTML 使用<em>标记标签</em>来描述网页</li>
 </ul>
 <p><strong>HTML基本框架:</strong></p>
-<html><br><head><br><title>标题<title><br></title></title></head><br><br><body><br>    主体<br></body><br><br></html>
-
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    主体</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><strong>HTML知识点:</strong> 1. 标签：</p>
 <ul>
 <li>html标签是由一对尖括号组成的</li>
-<li>html标签分为单标签和双标签， 双标签:<html></html><body></body>          <p></p> 单标签：<br> ， 一般是用双标签</li>
-<li>双标签第一个为开始标签，第二个为结束标签。</li>
-</ul>
-<p>2.框架解释：</p>
-<ul>
-<li>浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容，一般我们看到的网页就是放在服务器上的html文档，被网页解读出来就是呈现在我们面前的网页。</li>
-<li><html></html>标签:  告知浏览器此为HTML文档。</li>
-<li><head></head>标签: 定义文档头部，一些css样式脚本，<meta>标签 定义字符集之类的还有title标签必须放在其中，也就是写<head></head>必须写<title></title></li>
-<li><title></title>标签: 定义文档的标题，一般在浏览器的上方页面切换卡显示的文字</li>
-<li><body></body>标签: 定义文档的主体，也就是网站页面显示的所有内容在此定义</li>
+<li><p>html标签分为单标签和双标签， 双标签:<figure class="highlight plain"><figcaption><span><p></p>``` 单标签：```<br>``` ， 一般是用双标签</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*       双标签第一个为开始标签，第二个为结束标签。</span><br><span class="line"></span><br><span class="line">2.框架解释：</span><br><span class="line"></span><br><span class="line">*   浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容，一般我们看到的网页就是放在服务器上的html文档，被网页解读出来就是呈现在我们面前的网页。</span><br><span class="line">*   ```&lt;html&gt;&lt;/html&gt;```标签:  告知浏览器此为HTML文档。</span><br><span class="line">*   ```&lt;head&gt;&lt;/head&gt;```标签: 定义文档头部，一些css样式脚本，```&lt;meta&gt;```标签 定义字符集之类的还有title标签必须放在其中，也就是写```&lt;head&gt;&lt;/head&gt;```必须写```&lt;title&gt;&lt;/title&gt;</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p><code>&lt;title&gt;&lt;/title&gt;</code>标签: 定义文档的标题，一般在浏览器的上方页面切换卡显示的文字</p>
+</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>标签: 定义文档的主体，也就是网站页面显示的所有内容在此定义</li>
 </ul>
 
       
@@ -565,6 +559,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -782,6 +787,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
