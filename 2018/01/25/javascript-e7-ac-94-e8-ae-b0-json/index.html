@@ -9,13 +9,14 @@
   <title>JavaScript笔记: JSON | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="概念： JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。 语法： JSON 键值对是用来保存 JS 对象的一种方式，和 JS 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值。 {“key”:value}等价于JavaScript的{key : value} 重点： JSON">
+<meta name="keywords" content="json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript笔记: JSON">
 <meta property="og:url" content="https://ipanyiwen.github.io/2018/01/25/javascript-e7-ac-94-e8-ae-b0-json/index.html">
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="概念： JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。 语法： JSON 键值对是用来保存 JS 对象的一种方式，和 JS 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值。 {“key”:value}等价于JavaScript的{key : value} 重点： JSON">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-01T12:22:23.955Z">
+<meta property="og:updated_time" content="2018-07-02T00:38:39.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript笔记: JSON">
 <meta name="twitter:description" content="概念： JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。 语法： JSON 键值对是用来保存 JS 对象的一种方式，和 JS 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值。 {“key”:value}等价于JavaScript的{key : value} 重点： JSON">
@@ -182,10 +183,10 @@
 <p>{“key”:value}<br>等价于JavaScript的<br>{key : value}</p>
 <p><strong>重点：</strong> <strong>JSON 是 JS 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</strong> <strong>JSON 语法非常简单, 简单记住三种: {} 和 [] 和 :</strong> <strong>一对大括号, 代表一个对象, {id : 1, name:’xiaoming’}</strong> <strong>一对中括号, 代表一个数组, [{id : 1, name:’xiaoming’}, {id : 2, name:’xiaohong’}]</strong> <strong>  冒号,  冒号前是key, 后是value.</strong> JSON与JS对象之间的转化方式：</p>
 <p>要实现从对象转换为 JSON 字符串，使用 JSON.stringify() 方法：</p>
-<pre><code>var
-</code></pre><p>要实现从 JSON 转换为对象，使用 JSON.parse() 方法：</p>
-<pre><code>var
-</code></pre><p><strong>JSON 数组：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  var json = JSON.stringify(&#123;a: </span><br><span class="line">&apos;Hello&apos;</span><br><span class="line">, b: </span><br><span class="line">&apos;World&apos;</span><br><span class="line">&#125;); </span><br><span class="line">  结果：&apos;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&apos;</span><br></pre></td></tr></table></figure>
+<p>要实现从 JSON 转换为对象，使用 JSON.parse() 方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  var obj = JSON.parse(</span><br><span class="line">&apos;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&apos;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">  结果： &#123;a: &apos;Hello&apos;, b: &apos;World&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>JSON 数组：</strong></p>
 <p>写在方括号中,{key : [value1_key : value, value2_key : value, …]}</p>
 <p>{<br>“employees”: [<br>{ “firstName”:”John” , “lastName”:”Doe” },<br>{ “firstName”:”Anna” , “lastName”:”Smith” },<br>{ “firstName”:”Peter” , “lastName”:”Jones” }<br>]<br>}</p>
 <p>因为json是一个字符串，所以传输起来比较快。解析起来也方便，web中常常用的到。</p>
@@ -218,6 +219,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">json</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -434,11 +446,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">协议</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">九大内置对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
             
             <div class="clearfix"></div>

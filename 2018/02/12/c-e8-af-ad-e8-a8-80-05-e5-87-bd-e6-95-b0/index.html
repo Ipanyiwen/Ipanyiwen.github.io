@@ -9,13 +9,14 @@
   <title>C语言_05 函数详解 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
+<meta name="keywords" content="c语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言_05 函数详解">
 <meta property="og:url" content="https://ipanyiwen.github.io/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/index.html">
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-01T12:22:23.959Z">
+<meta property="og:updated_time" content="2018-07-02T01:18:48.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言_05 函数详解">
 <meta name="twitter:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
@@ -216,13 +217,13 @@ hello world!
 <pre><code>panyiwen@god:~/temp$ ./test &amp;&amp; ./test1
 hello panyiwen@god:~/temp$
 </code></pre><p>只输出hello , 没有world和换行.也就是第二个test1.c没有执行.原因便是第一个程序的返回值是1,系统认为该程序没有执行成功.所以不会执行第二个test1</p>
-<h3 id="main函数的三种写法-两种"><a href="#main函数的三种写法-两种" class="headerlink" title="main函数的三种写法(两种)"></a>main函数的三种写法(两种)</h3><h4 id="1-int-main-void-括号中的void可以不写"><a href="#1-int-main-void-括号中的void可以不写" class="headerlink" title="1.int main(void) //括号中的void可以不写"></a>1.<code>int main(void) //括号中的void可以不写</code></h4><h4 id="2-int-main-int-argc-char-argv"><a href="#2-int-main-int-argc-char-argv" class="headerlink" title="2.int main(int argc, char *argv[])"></a>2.<code>int main(int argc, char *argv[])</code></h4><h4 id="3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展"><a href="#3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展" class="headerlink" title="3.int main(int argc, char *argv[], char *envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展"></a>3.<code>int main(int argc, char *argv[], char *envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展</code></h4><p>其实也就是main函数中可以不写参数, 写两个参数, 写三个参数. 因为是参数,所以名称可以自己取,也可以就用上述名称.</p>
+<h3 id="main函数的三种写法-两种"><a href="#main函数的三种写法-两种" class="headerlink" title="main函数的三种写法(两种)"></a>main函数的三种写法(两种)</h3><h4 id="1-int-main-void-括号中的void可以不写"><a href="#1-int-main-void-括号中的void可以不写" class="headerlink" title="1.int main(void) //括号中的void可以不写"></a>1.int main(void) //括号中的void可以不写</h4><h4 id="2-int-main-int-argc-char-argv"><a href="#2-int-main-int-argc-char-argv" class="headerlink" title="2.int main(int argc, char *argv[])"></a>2.int main(int argc, char *argv[])</h4><h4 id="3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展"><a href="#3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展" class="headerlink" title="3.int main(int argc, char argv[], char envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展"></a>3.int main(int argc, char <em>argv[], char </em>envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展</h4><p>其实也就是main函数中可以不写参数, 写两个参数, 写三个参数. 因为是参数,所以名称可以自己取,也可以就用上述名称.</p>
 <h4 id="三个参数"><a href="#三个参数" class="headerlink" title="三个参数"></a>三个参数</h4><ol>
 <li><code>int argc</code> 整型参数, argc = 1+输入的参数个数, 系统自动赋值, 无需我们写, 1 为程序的名称.</li>
 <li><code>char *argv[]</code> 字符串数组, argv[0] 表示程序的名称, argv[1]~argv[argc-1]代表我们传入的参数.</li>
 <li><code>char *envp[]</code> 字符串数组, 表示系统的环境变量</li>
 </ol>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h4><p>#include &lt;stdio.h&gt;<br>    int main(int argc, char *argv[], char *envp[]){<br>        int i;<br>        printf(“%d\n\n”, argc);<br>        for (i = 0; i &lt; argc; i++){<br>            printf(“%s\n”, argv[i]);<br>        }<br>        printf(“\n”);<br>        for (i = 0; envp[i] != NULL; i++){<br>            printf(“%s\n”, envp[i]);<br>        }<br>        return 0;<br>    }</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">    int main(int argc, char \*argv\[\], char \*envp\[\])&#123;</span><br><span class="line">        int i;</span><br><span class="line">        printf(&quot;%d\\n\\n&quot;, argc);</span><br><span class="line">        for (i = 0; i &amp;lt; argc; i++)&#123;</span><br><span class="line">            printf(&quot;%s\\n&quot;, argv\[i\]);</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;\\n&quot;);</span><br><span class="line">        for (i = 0; envp\[i\] != NULL; i++)&#123;</span><br><span class="line">            printf(&quot;%s\\n&quot;, envp\[i\]);</span><br><span class="line">        &#125;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>我们执行这段程序, 并输入参数hello world, 部分输出结果, 因为系统环境变量太多.</p>
 <pre><code>panyiwen@god:~/temp$ ./test hello world
 3
@@ -289,7 +290,8 @@ int main(){
 int max(int a, int b){
     return a &gt; b ? a : b;   //三目运算符 等价与 if(a &gt; b) {return a;} else{ return b;}
 }
-</code></pre><p>声明也就是告诉计算机,如果在这之前没找到这个函数没关系,先别报错,我的函数在下面. 友情链接: <a href="http://blog.csdn.net/Crazy_Tengt/article/details/72717144" target="_blank" rel="noopener">http://blog.csdn.net/Crazy_Tengt/article/details/72717144</a> <a href="http://blog.csdn.net/q565220/article/details/49951885" target="_blank" rel="noopener">http://blog.csdn.net/q565220/article/details/49951885</a></p>
+</code></pre><p>声明也就是告诉计算机,如果在这之前没找到这个函数没关系,先别报错,我的函数在下面.</p>
+<p>友情链接:<br><a href="http://blog.csdn.net/Crazy_Tengt/article/details/72717144" target="_blank" rel="noopener">http://blog.csdn.net/Crazy_Tengt/article/details/72717144</a><br><a href="http://blog.csdn.net/q565220/article/details/49951885" target="_blank" rel="noopener">http://blog.csdn.net/q565220/article/details/49951885</a></p>
 
       
 
@@ -319,6 +321,17 @@ int max(int a, int b){
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -531,11 +544,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">协议</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">九大内置对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
             
             <div class="clearfix"></div>

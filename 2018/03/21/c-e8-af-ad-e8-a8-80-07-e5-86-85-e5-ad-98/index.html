@@ -9,6 +9,7 @@
   <title>C语言_07 内存 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将">
+<meta name="keywords" content="c语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言_07 内存">
 <meta property="og:url" content="https://ipanyiwen.github.io/2018/03/21/c-e8-af-ad-e8-a8-80-07-e5-86-85-e5-ad-98/index.html">
@@ -19,7 +20,7 @@
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/changliangqu.png">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/string.png">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1356942710_5027.jpg">
-<meta property="og:updated_time" content="2018-07-01T12:22:23.959Z">
+<meta property="og:updated_time" content="2018-07-02T01:24:00.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言_07 内存">
 <meta name="twitter:description" content="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将">
@@ -183,7 +184,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性"><a href="#前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性" class="headerlink" title="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性."></a>前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.</h4><h3 id="参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区"><a href="#参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区" class="headerlink" title="参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区."></a>参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.</h3><h4 id="1-四区-栈区-堆区-全局-静态-区-常量-代码-区"><a href="#1-四区-栈区-堆区-全局-静态-区-常量-代码-区" class="headerlink" title="1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区."></a>1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.</h4><h4 id="2-五区-栈区-堆区-全局-静态-区-常量区-代码区"><a href="#2-五区-栈区-堆区-全局-静态-区-常量区-代码区" class="headerlink" title="2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区."></a>2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.</h4><p>其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将最后的那个区分开理解就好. 当然还有一种分四区: 栈区, 堆区, 数据区, 代码区. 将数据区细分为全局(静态)区, 常量区.虽然这样分很好理解,但是并不那么贴切(个人感觉). 来张图片理解一下(随便百度的): 最上面的计算机内核使用的归操作系统,虽然和我们编写程序没什么关系,但是也要了解以下. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1132092356331491654.jpg" alt=""></p>
+        <h4 id="前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性"><a href="#前言-程序的执行是放入内存中的-而我们在写代码时定义的变量-函数等是存储在内存的不同区域-不同的区域有着不同的特性" class="headerlink" title="前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性."></a>前言: 程序的执行是放入内存中的,而我们在写代码时定义的变量, 函数等是存储在内存的不同区域. 不同的区域有着不同的特性.</h4><h3 id="参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区"><a href="#参考资料和网上所说的内存分区大致可以分为两种-分四个区和分五个区" class="headerlink" title="参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区."></a>参考资料和网上所说的内存分区大致可以分为两种: 分四个区和分五个区.</h3><h4 id="1-四区-栈区-堆区-全局-静态-区-常量-代码-区"><a href="#1-四区-栈区-堆区-全局-静态-区-常量-代码-区" class="headerlink" title="1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区."></a>1.四区: 栈区, 堆区, 全局(静态)区, 常量(代码)区.</h4><h4 id="2-五区-栈区-堆区-全局-静态-区-常量区-代码区"><a href="#2-五区-栈区-堆区-全局-静态-区-常量区-代码区" class="headerlink" title="2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区."></a>2.五区: 栈区, 堆区, 全局(静态)区, 常量区. 代码区.</h4><p>其实这两者就是将最后一个区分为常量区和代码区.我们介绍的话就以五区来介绍吧. 主要将最后的那个区分开理解就好. 当然还有一种分四区: 栈区, 堆区, 数据区, 代码区. 将数据区细分为全局(静态)区, 常量区.虽然这样分很好理解,但是并不那么贴切(个人感觉). 来张图片理解一下(随便百度的): 最上面的计算机内核使用的归操作系统,虽然和我们编写程序没什么关系,但是也要了解以下.</p>
+<p><img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1132092356331491654.jpg" alt=""></p>
 <h2 id="内存五区"><a href="#内存五区" class="headerlink" title="内存五区:"></a>内存五区:</h2><h3 id="1-栈区"><a href="#1-栈区" class="headerlink" title="1.栈区:"></a>1.栈区:</h3><p>栈区,是我们最常用到的区域, 因为我们所有的普通局部变量全部存储在这个区.就如我们定义和使用局部变量一样. 在栈区的数据是不需要我们手动去申请和释放内存的. 这个过程全部由编译器帮我们完成,所以我们的局部变量可以直接使用.</p>
 <pre><code>int func(int x, int y){   //传递过来的参数 在栈区
     int z = x + y;     //函数内部定义的局部变量在栈区
@@ -230,7 +232,8 @@ int main(){
     static int a = 3;  //全局(静态)区 .data段
     return 0;
 }
-</code></pre><h3 id="4-常量区"><a href="#4-常量区" class="headerlink" title="4.常量区:"></a>4.常量区:</h3><p>常量区: (也叫文字常量区)我们在程序中使用的一些整型常量, 浮点型常量, 还有一个很容易误会的字符串常量都是存放在常量区. 举个简单的例子: int a = 4; 我们知道a是存放在栈区的, &amp;a的地址就是栈区的地址, 但是4却是存放在常量区.画图帮助理解. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/changliangqu.png" alt=""> 普通的常量很好理解, 但是字符串有点特殊.举个例子.</p>
+</code></pre><h3 id="4-常量区"><a href="#4-常量区" class="headerlink" title="4.常量区:"></a>4.常量区:</h3><p>常量区: (也叫文字常量区)我们在程序中使用的一些整型常量, 浮点型常量, 还有一个很容易误会的字符串常量都是存放在常量区. 举个简单的例子: int a = 4; 我们知道a是存放在栈区的, &amp;a的地址就是栈区的地址, 但是4却是存放在常量区.画图帮助理解.<br><img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/changliangqu.png" alt=""> </p>
+<p>普通的常量很好理解, 但是字符串有点特殊.举个例子.</p>
 <pre><code>int main(){
     char *s = &quot;abc&quot;;   //字符串
     char *s1 = &quot;abc&quot;;   //字符串
@@ -247,7 +250,9 @@ int main(){
 0x7ffe50893e90
 </code></pre><p><em>可以看出指针s 和 s1指向的是同一个地址, 而s2和前两个都不同. 原因就是: s 和 s1 都是指向常量区的地址, 常量区只有一个字符串”abc”, 而s2是一个普通的局部变量数组, 那么s2就是存储在栈区的一个字符串</em> 画图理解: <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/string.png" alt=""></p>
 <h3 id="5-代码区"><a href="#5-代码区" class="headerlink" title="5 代码区:"></a>5 代码区:</h3><p>代码区: 故名思义, 所有的代码是存放在这里.而且是编译后的二进制代码.当然这个区是由操作系统直接控制.</p>
-<h4 id="代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区"><a href="#代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区" class="headerlink" title="代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区."></a><em>代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区.</em></h4><p>再放入一张横向图片供参考. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1356942710_5027.jpg" alt=""> 鸣谢: <a href="http://blog.csdn.net/czg13548930186/article/details/52766606" target="_blank" rel="noopener">http://blog.csdn.net/czg13548930186/article/details/52766606</a> <a href="http://blog.csdn.net/androidxiaogang/article/details/50383516" target="_blank" rel="noopener">http://blog.csdn.net/androidxiaogang/article/details/50383516</a> <a href="http://blog.csdn.net/u010672206/article/details/46946593" target="_blank" rel="noopener">http://blog.csdn.net/u010672206/article/details/46946593</a> 希望能让你能有所收获, 不对的地方还请多多指教.</p>
+<h4 id="代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区"><a href="#代码区和常量区因为都是不可修改的-所以这两个区也被合并在一块称之为只读区" class="headerlink" title="代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区."></a><em>代码区和常量区因为都是不可修改的, 所以这两个区也被合并在一块称之为只读区.</em></h4><p>再放入一张横向图片供参考.<br><img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/1356942710_5027.jpg" alt=""> </p>
+<p>鸣谢:<br><a href="http://blog.csdn.net/czg13548930186/article/details/52766606" target="_blank" rel="noopener">http://blog.csdn.net/czg13548930186/article/details/52766606</a><br><a href="http://blog.csdn.net/androidxiaogang/article/details/50383516" target="_blank" rel="noopener">http://blog.csdn.net/androidxiaogang/article/details/50383516</a><br><a href="http://blog.csdn.net/u010672206/article/details/46946593" target="_blank" rel="noopener">http://blog.csdn.net/u010672206/article/details/46946593</a> </p>
+<p>希望能让你能有所收获, 不对的地方还请多多指教.</p>
 
       
 
@@ -277,6 +282,17 @@ int main(){
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -489,11 +505,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">c语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">协议</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">九大内置对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
             
             <div class="clearfix"></div>
