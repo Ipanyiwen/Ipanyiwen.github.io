@@ -9,13 +9,14 @@
   <title>笔记: AJAX | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="概念：AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 Question： 当注册一个网">
+<meta name="keywords" content="ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记: AJAX">
 <meta property="og:url" content="https://ipanyiwen.github.io/2018/01/25/e7-ac-94-e8-ae-b0-ajax/index.html">
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="概念：AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 Question： 当注册一个网">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-01T12:22:23.955Z">
+<meta property="og:updated_time" content="2018-07-02T06:28:16.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记: AJAX">
 <meta name="twitter:description" content="概念：AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 Question： 当注册一个网">
@@ -176,10 +177,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念："><span class="toc-number">1.</span> <span class="toc-text">概念：</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a><strong>概念：</strong></h2><p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 <strong>Question：</strong> 当注册一个网页的时候，填写完用户名，文本框刚刚失去焦点，马上提示该用户已经被注册。这肯定是访问了后台，但是页面也没有刷新呀。一般是用了AJAX。不重新加载整个页面的情况下与服务器进行交互。 <strong>语法：</strong> <strong>1. JavaScript：</strong></p>
+	
+  	
+  	  <h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a><strong>概念：</strong></h2><p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 <strong>Question：</strong> 当注册一个网页的时候，填写完用户名，文本框刚刚失去焦点，马上提示该用户已经被注册。这肯定是访问了后台，但是页面也没有刷新呀。一般是用了AJAX。不重新加载整个页面的情况下与服务器进行交互。 <strong>语法：</strong> <strong>1. JavaScript：</strong></p>
 <pre><code>function getInfo()
 {
     var xmlhttp;
@@ -218,6 +245,7 @@
 <p>$.ajax(function(){<br>    type: “post”,<br>    url : “url”,<br>    data: {“name”:”Peter”},<br>    success:function(data, status){<br>       //处理<br>    },<br>    error:function(){<br>        //error有三个参数，可以依据情况需要写<br>    }<br>});</p>
 <p>jquery还专门封装了$.get() 和 $.post()的ajax用法，分别执行get和post。</p>
 
+  	
       
 
       
@@ -246,6 +274,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -355,6 +394,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念："><span class="toc-number">1.</span> <span class="toc-text">概念：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -483,6 +535,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

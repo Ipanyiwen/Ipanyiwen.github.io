@@ -17,7 +17,7 @@
 <meta property="og:description" content="概念 指针（Pointer）是编程语言中的一个对象，利用地址，它的值直接指向（points to）存在电脑存储器中另一个地方的值。由于通过地址能找到所需的变量单元，可以说，地址指向该变量单元。因此，将地址形象化的称为“指针”。意思是通过它能找到以它为地址的内存单元。  我们都知道, 在计算机语言中, 变量是储存在计算机的内存中的, 所以C程序想要访问得到变量必须知道储存在计算机内存中的什么位置,">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/03/point.png">
-<meta property="og:updated_time" content="2018-07-02T01:20:22.129Z">
+<meta property="og:updated_time" content="2018-07-02T06:25:58.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言_06 指针">
 <meta name="twitter:description" content="概念 指针（Pointer）是编程语言中的一个对象，利用地址，它的值直接指向（points to）存在电脑存储器中另一个地方的值。由于通过地址能找到所需的变量单元，可以说，地址指向该变量单元。因此，将地址形象化的称为“指针”。意思是通过它能找到以它为地址的内存单元。  我们都知道, 在计算机语言中, 变量是储存在计算机的内存中的, 所以C程序想要访问得到变量必须知道储存在计算机内存中的什么位置,">
@@ -179,10 +179,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指针的定义方法"><span class="toc-number">2.</span> <span class="toc-text">指针的定义方法:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取地址符-amp-和指针运算符"><span class="toc-number">2.1.</span> <span class="toc-text">取地址符: &amp; 和指针运算符 *</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#取地址符-amp"><span class="toc-number">2.1.1.</span> <span class="toc-text">取地址符 &amp;:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针运算符"><span class="toc-number">2.1.2.</span> <span class="toc-text">指针运算符 *:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指针和指针变量"><span class="toc-number">3.</span> <span class="toc-text">指针和指针变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#重点-指针变量中存放的地址-这个地址是指变量的首地址"><span class="toc-number">3.0.1.</span> <span class="toc-text">重点: 指针变量中存放的地址, 这个地址是指变量的首地址.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指向指针的指针"><span class="toc-number">4.</span> <span class="toc-text">指向指针的指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指针变量的地址"><span class="toc-number">4.1.</span> <span class="toc-text">指针变量的地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指向指针的指针-1"><span class="toc-number">4.2.</span> <span class="toc-text">指向指针的指针</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组与指针的关系"><span class="toc-number">5.</span> <span class="toc-text">数组与指针的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二维数组与指针"><span class="toc-number">5.0.1.</span> <span class="toc-text">二维数组与指针:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重点-但是a中存放的并不是一个新的指针数组-tmp-所在的地址-而是原来数组的首位地址-所以如果我们用int-p来指代a是不对的"><span class="toc-number">5.0.2.</span> <span class="toc-text">重点: 但是a中存放的并不是一个新的指针数组(tmp)所在的地址, 而是原来数组的首位地址,所以如果我们用int **p来指代a是不对的.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构体与指针"><span class="toc-number">6.</span> <span class="toc-text">结构体与指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构体中的指针"><span class="toc-number">6.0.1.</span> <span class="toc-text">结构体中的指针:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构体指针"><span class="toc-number">6.0.2.</span> <span class="toc-text">结构体指针:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数与指针"><span class="toc-number">7.</span> <span class="toc-text">函数与指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#传递指针参数"><span class="toc-number">7.0.1.</span> <span class="toc-text">传递指针参数:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针函数"><span class="toc-number">7.0.2.</span> <span class="toc-text">指针函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数指针"><span class="toc-number">7.0.3.</span> <span class="toc-text">函数指针</span></a></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
+	
+  	
+  	  <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
 <p><strong>指针</strong>（Pointer）是编程语言中的一个对象，利用地址，它的值直接指向（points to）存在电脑存储器中另一个地方的值。由于通过地址能找到所需的变量单元，可以说，地址指向该变量单元。因此，将地址形象化的称为“指针”。意思是通过它能找到以它为地址的内存单元。</p>
 </blockquote>
 <p>我们都知道, 在计算机语言中, 变量是储存在计算机的内存中的, 所以C程序想要访问得到变量必须知道储存在计算机内存中的什么位置, 在C程序中用来存储这个位置的变量就是指针.</p>
@@ -344,6 +370,7 @@ int main(){
 }
 </code></pre><p>感谢: <a href="http://nevel.cnblogs.com/p/6370264.html" target="_blank" rel="noopener">http://nevel.cnblogs.com/p/6370264.html</a></p>
 
+  	
       
 
       
@@ -489,6 +516,19 @@ int main(){
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指针的定义方法"><span class="toc-number">2.</span> <span class="toc-text">指针的定义方法:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取地址符-amp-和指针运算符"><span class="toc-number">2.1.</span> <span class="toc-text">取地址符: &amp; 和指针运算符 *</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#取地址符-amp"><span class="toc-number">2.1.1.</span> <span class="toc-text">取地址符 &amp;:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针运算符"><span class="toc-number">2.1.2.</span> <span class="toc-text">指针运算符 *:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指针和指针变量"><span class="toc-number">3.</span> <span class="toc-text">指针和指针变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#重点-指针变量中存放的地址-这个地址是指变量的首地址"><span class="toc-number">3.0.1.</span> <span class="toc-text">重点: 指针变量中存放的地址, 这个地址是指变量的首地址.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指向指针的指针"><span class="toc-number">4.</span> <span class="toc-text">指向指针的指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指针变量的地址"><span class="toc-number">4.1.</span> <span class="toc-text">指针变量的地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指向指针的指针-1"><span class="toc-number">4.2.</span> <span class="toc-text">指向指针的指针</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组与指针的关系"><span class="toc-number">5.</span> <span class="toc-text">数组与指针的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二维数组与指针"><span class="toc-number">5.0.1.</span> <span class="toc-text">二维数组与指针:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重点-但是a中存放的并不是一个新的指针数组-tmp-所在的地址-而是原来数组的首位地址-所以如果我们用int-p来指代a是不对的"><span class="toc-number">5.0.2.</span> <span class="toc-text">重点: 但是a中存放的并不是一个新的指针数组(tmp)所在的地址, 而是原来数组的首位地址,所以如果我们用int **p来指代a是不对的.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构体与指针"><span class="toc-number">6.</span> <span class="toc-text">结构体与指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构体中的指针"><span class="toc-number">6.0.1.</span> <span class="toc-text">结构体中的指针:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构体指针"><span class="toc-number">6.0.2.</span> <span class="toc-text">结构体指针:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数与指针"><span class="toc-number">7.</span> <span class="toc-text">函数与指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#传递指针参数"><span class="toc-number">7.0.1.</span> <span class="toc-text">传递指针参数:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针函数"><span class="toc-number">7.0.2.</span> <span class="toc-text">指针函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数指针"><span class="toc-number">7.0.3.</span> <span class="toc-text">函数指针</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -616,6 +656,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

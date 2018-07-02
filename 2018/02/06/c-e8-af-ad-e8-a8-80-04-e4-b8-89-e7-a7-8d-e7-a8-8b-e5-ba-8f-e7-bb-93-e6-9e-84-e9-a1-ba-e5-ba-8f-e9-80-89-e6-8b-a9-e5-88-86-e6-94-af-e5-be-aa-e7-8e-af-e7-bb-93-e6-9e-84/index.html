@@ -17,7 +17,7 @@
 <meta property="og:description" content="概念在C语言程序中，一共有三种程序结构：顺序结构、选择结构(分支结构)、循环结构； 顺序结构，从头到尾一句接着一句的执行下来，直到执行完最后一句； 选择结构，到某个节点后，会根据一次判断的结果来决定之后向哪一个分支方向执行； 循环结构，循环结构有一个循环体，循环体里是一段代码。对于循环结构来说，关键在于根据判断的结果，来决定循环体执行多少次。C语言循环控制语句是一个基于C语言的编程语句，该语句主要">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ipanyiwen.github.io/wordpress/wp-content/uploads/2018/02/20180206015153_85801.png">
-<meta property="og:updated_time" content="2018-07-02T01:14:10.502Z">
+<meta property="og:updated_time" content="2018-07-02T06:25:01.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言_04 三种程序结构 顺序, 选择(分支), 循环结构">
 <meta name="twitter:description" content="概念在C语言程序中，一共有三种程序结构：顺序结构、选择结构(分支结构)、循环结构； 顺序结构，从头到尾一句接着一句的执行下来，直到执行完最后一句； 选择结构，到某个节点后，会根据一次判断的结果来决定之后向哪一个分支方向执行； 循环结构，循环结构有一个循环体，循环体里是一段代码。对于循环结构来说，关键在于根据判断的结果，来决定循环体执行多少次。C语言循环控制语句是一个基于C语言的编程语句，该语句主要">
@@ -179,10 +179,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-顺序结构"><span class="toc-number">2.</span> <span class="toc-text">1.顺序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-选择-分支-结构"><span class="toc-number">3.</span> <span class="toc-text">2.选择(分支)结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-if-else-语句"><span class="toc-number">3.1.</span> <span class="toc-text">1) if-else 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-switch-case-语句"><span class="toc-number">3.2.</span> <span class="toc-text">2)switch-case 语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-循环结构"><span class="toc-number">4.</span> <span class="toc-text">3.循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-for循环"><span class="toc-number">4.1.</span> <span class="toc-text">1) for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-while-循环"><span class="toc-number">4.2.</span> <span class="toc-text">2)  while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-do-while循环"><span class="toc-number">4.3.</span> <span class="toc-text">3) do-while循环</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在C语言程序中，一共有三种程序结构：顺序结构、选择结构(分支结构)、循环结构；</p>
+	
+  	
+  	  <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在C语言程序中，一共有三种程序结构：顺序结构、选择结构(分支结构)、循环结构；</p>
 <p>顺序结构，从头到尾一句接着一句的执行下来，直到执行完最后一句；</p>
 <p>选择结构，到某个节点后，会根据一次判断的结果来决定之后向哪一个分支方向执行；</p>
 <p>循环结构，循环结构有一个循环体，循环体里是一段代码。对于循环结构来说，关键在于根据判断的结果，来决定循环体执行多少次。C语言循环控制语句是一个基于C语言的编程语句，该语句主要有while循环语句、do-while循环语句和for循环语句来实现循环结构。</p>
@@ -253,6 +279,7 @@
 <p>while循环: 在我们不太清楚循环在什么时候结束, 并且我们也不关心具体的循环次数的时候推荐使用.  </p>
 <p>do-while循环: 如果我们需要判断的内容必须要执行一遍循环体才能知道的话推荐使用.</p>
 
+  	
       
 
       
@@ -398,6 +425,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-顺序结构"><span class="toc-number">2.</span> <span class="toc-text">1.顺序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-选择-分支-结构"><span class="toc-number">3.</span> <span class="toc-text">2.选择(分支)结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-if-else-语句"><span class="toc-number">3.1.</span> <span class="toc-text">1) if-else 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-switch-case-语句"><span class="toc-number">3.2.</span> <span class="toc-text">2)switch-case 语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-循环结构"><span class="toc-number">4.</span> <span class="toc-text">3.循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-for循环"><span class="toc-number">4.1.</span> <span class="toc-text">1) for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-while-循环"><span class="toc-number">4.2.</span> <span class="toc-text">2)  while 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-do-while循环"><span class="toc-number">4.3.</span> <span class="toc-text">3) do-while循环</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -525,6 +565,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

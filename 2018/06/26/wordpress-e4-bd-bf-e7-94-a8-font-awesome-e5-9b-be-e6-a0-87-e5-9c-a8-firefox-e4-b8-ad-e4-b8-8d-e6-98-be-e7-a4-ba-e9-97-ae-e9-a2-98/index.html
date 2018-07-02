@@ -182,12 +182,15 @@
          
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>问题:</strong>  换了个主题后发现一些图标的不显示。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/06/LO43X4C46DIXN8N4ISJ@N6-300x111.png" alt=""> <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/06/QQ图片20180626150908-300x48.png" alt=""> 解决方案： 由于字体跨域导致。 由于我的是apache2服务器。 进入配置文件：</p>
+	
+  	
+  	  <p><strong>问题:</strong>  换了个主题后发现一些图标的不显示。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/06/LO43X4C46DIXN8N4ISJ@N6-300x111.png" alt=""> <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/06/QQ图片20180626150908-300x48.png" alt=""> 解决方案： 由于字体跨域导致。 由于我的是apache2服务器。 进入配置文件：</p>
 <pre><code>sudo vim /etc/httpd/conf/httpd.conf 
 </code></pre><p>添加</p>
 <pre><code>Header set Access-Control-Allow-Origin * 
 </code></pre><p>问题解决！</p>
 
+  	
       
 
       
@@ -440,6 +443,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

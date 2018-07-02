@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-02T01:18:48.865Z">
+<meta property="og:updated_time" content="2018-07-02T06:25:33.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言_05 函数详解">
 <meta name="twitter:description" content="概念 “函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。  函数的写法返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写 {     //函数体     ....">
@@ -177,10 +177,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的写法"><span class="toc-number">2.</span> <span class="toc-text">函数的写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#main函数"><span class="toc-number">3.</span> <span class="toc-text">main函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main函数的返回值"><span class="toc-number">3.1.</span> <span class="toc-text">main函数的返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main函数的三种写法-两种"><span class="toc-number">3.2.</span> <span class="toc-text">main函数的三种写法(两种)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-int-main-void-括号中的void可以不写"><span class="toc-number">3.2.1.</span> <span class="toc-text">1.int main(void) //括号中的void可以不写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-int-main-int-argc-char-argv"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.int main(int argc, char *argv[])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.int main(int argc, char argv[], char envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三个参数"><span class="toc-number">3.2.4.</span> <span class="toc-text">三个参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">3.2.5.</span> <span class="toc-text">例子:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库函数"><span class="toc-number">4.</span> <span class="toc-text">库函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stdio-h"><span class="toc-number">4.1.</span> <span class="toc-text">stdio.h</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#引用方法-include-lt-stdio-h-gt"><span class="toc-number">4.1.0.1.</span> <span class="toc-text">引用方法: #include &lt;stdio.h&gt;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scanf函数和printf函数"><span class="toc-number">4.2.</span> <span class="toc-text">scanf函数和printf函数:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stdin-stdout-stderr的简单介绍"><span class="toc-number">4.3.</span> <span class="toc-text">stdin, stdout, stderr的简单介绍:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">5.</span> <span class="toc-text">自定义函数</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
+	
+  	
+  	  <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
 <p>“函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。</p>
 </blockquote>
 <h2 id="函数的写法"><a href="#函数的写法" class="headerlink" title="函数的写法"></a>函数的写法</h2><pre><code>返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写
@@ -294,6 +320,7 @@ int max(int a, int b){
 </code></pre><p>声明也就是告诉计算机,如果在这之前没找到这个函数没关系,先别报错,我的函数在下面.</p>
 <p>友情链接:<br><a href="http://blog.csdn.net/Crazy_Tengt/article/details/72717144" target="_blank" rel="noopener">http://blog.csdn.net/Crazy_Tengt/article/details/72717144</a><br><a href="http://blog.csdn.net/q565220/article/details/49951885" target="_blank" rel="noopener">http://blog.csdn.net/q565220/article/details/49951885</a></p>
 
+  	
       
 
       
@@ -439,6 +466,19 @@ int max(int a, int b){
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的写法"><span class="toc-number">2.</span> <span class="toc-text">函数的写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#main函数"><span class="toc-number">3.</span> <span class="toc-text">main函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main函数的返回值"><span class="toc-number">3.1.</span> <span class="toc-text">main函数的返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main函数的三种写法-两种"><span class="toc-number">3.2.</span> <span class="toc-text">main函数的三种写法(两种)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-int-main-void-括号中的void可以不写"><span class="toc-number">3.2.1.</span> <span class="toc-text">1.int main(void) //括号中的void可以不写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-int-main-int-argc-char-argv"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.int main(int argc, char *argv[])</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-int-main-int-argc-char-argv-char-envp-不建议使用-因为第三个参数只是类unix系统的拓展"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.int main(int argc, char argv[], char envp[]) //不建议使用, 因为第三个参数只是类unix系统的拓展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三个参数"><span class="toc-number">3.2.4.</span> <span class="toc-text">三个参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">3.2.5.</span> <span class="toc-text">例子:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库函数"><span class="toc-number">4.</span> <span class="toc-text">库函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stdio-h"><span class="toc-number">4.1.</span> <span class="toc-text">stdio.h</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#引用方法-include-lt-stdio-h-gt"><span class="toc-number">4.1.0.1.</span> <span class="toc-text">引用方法: #include &lt;stdio.h&gt;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scanf函数和printf函数"><span class="toc-number">4.2.</span> <span class="toc-text">scanf函数和printf函数:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stdin-stdout-stderr的简单介绍"><span class="toc-number">4.3.</span> <span class="toc-text">stdin, stdout, stderr的简单介绍:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义函数"><span class="toc-number">5.</span> <span class="toc-text">自定义函数</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -566,6 +606,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

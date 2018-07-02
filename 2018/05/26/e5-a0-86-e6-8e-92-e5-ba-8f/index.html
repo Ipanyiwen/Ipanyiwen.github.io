@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/05/2018-05-26-21-47-47-的屏幕截图.png">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/05/2018-05-26-21-46-50-的屏幕截图.png">
-<meta property="og:updated_time" content="2018-07-01T12:22:23.959Z">
+<meta property="og:updated_time" content="2018-07-02T06:27:06.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆排序">
 <meta name="twitter:description" content="堆的定义 堆（英语：heap)是计算机科学中一类特殊的数据结构的统称。堆通常是一个可以被看做一棵树的数组对象。堆总是满足下列性质：堆中某个节点的值总是不大于或不小于其父节点的值；堆总是一棵完全二叉树。  大根堆将根节点最大的堆叫做最大堆或大根堆，在这颗完全二叉树中,所有根节点都大于两个子节点.  小根堆根节点最小的堆叫做最小堆或小根堆。在这颗完全二叉树中,所有根节点都小于两个子节点.  堆的定义如">
@@ -180,10 +180,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆的定义"><span class="toc-number">1.</span> <span class="toc-text">堆的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#大根堆"><span class="toc-number">1.1.</span> <span class="toc-text">大根堆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小根堆"><span class="toc-number">1.2.</span> <span class="toc-text">小根堆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#堆的定义如下："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆的定义如下：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆排序"><span class="toc-number">1.3.</span> <span class="toc-text">堆排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#算法思路"><span class="toc-number">1.3.1.</span> <span class="toc-text">算法思路:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.2.</span> <span class="toc-text">代码实现:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构造大根堆分析"><span class="toc-number">1.3.3.</span> <span class="toc-text">构造大根堆分析:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#算法分析"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">算法分析:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#作用"><span class="toc-number">1.3.4.</span> <span class="toc-text">作用:</span></a></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
+	
+  	
+  	  <h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
 <p>堆（英语：heap)是计算机科学中一类特殊的数据结构的统称。堆通常是一个可以被看做一棵树的数组对象。堆总是满足下列性质：堆中某个节点的值总是不大于或不小于其父节点的值；堆总是一棵完全二叉树。</p>
 </blockquote>
 <h3 id="大根堆"><a href="#大根堆" class="headerlink" title="大根堆"></a>大根堆</h3><p>将根节点最大的堆叫做最大堆或大根堆，在这颗完全二叉树中,所有根节点都大于两个子节点. <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/05/2018-05-26-21-47-47-的屏幕截图.png" alt=""></p>
@@ -243,6 +269,7 @@
 <p>总时间复杂度: 循环n-1次,最坏的情况每次都从1到k, 每层都换,也就是log(n)次, 所以时间复杂度为: (n-1) * log(n) 所以总时间复杂度: O(nlog(n)).   空间复杂度:O(1) 稳定性: 不稳定的排序算法.</p>
 <h4 id="作用"><a href="#作用" class="headerlink" title="作用:"></a>作用:</h4><p>堆排序可以用来排序, 但大多数时候不如快排 可是当数据量巨大, 如百万级别的时候, 快排的递归调用可能会使堆栈溢出.而堆排序O(1)的空间复杂度,还没有递归调用, 就十分合适了. 还可以用来实现优先队列.</p>
 
+  	
       
 
       
@@ -388,6 +415,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆的定义"><span class="toc-number">1.</span> <span class="toc-text">堆的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#大根堆"><span class="toc-number">1.1.</span> <span class="toc-text">大根堆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小根堆"><span class="toc-number">1.2.</span> <span class="toc-text">小根堆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#堆的定义如下："><span class="toc-number">1.2.1.</span> <span class="toc-text">堆的定义如下：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆排序"><span class="toc-number">1.3.</span> <span class="toc-text">堆排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#算法思路"><span class="toc-number">1.3.1.</span> <span class="toc-text">算法思路:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.2.</span> <span class="toc-text">代码实现:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构造大根堆分析"><span class="toc-number">1.3.3.</span> <span class="toc-text">构造大根堆分析:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#算法分析"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">算法分析:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#作用"><span class="toc-number">1.3.4.</span> <span class="toc-text">作用:</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -515,6 +555,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

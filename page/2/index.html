@@ -180,25 +180,14 @@
          
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><a href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。" class="headerlink" title="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"></a><strong>概念</strong>：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</h1><p>前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机的。</p>
-<h1 id="一、-五层模型。"><a href="#一、-五层模型。" class="headerlink" title="一、 五层模型。"></a><strong>一、 五层模型。</strong></h1><p>互联网的模型有7层模型， 4层模型的说法，5层模型是结合这两种更加利于理解的一种说法。5层模型从上往下分别是：应用层，传输层，网络层，数据链路层，物理层。（名词可能会有点出入，翻译问题） <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/7bf4e8201ee0799d2770a37ed41232eb.png" alt=""></p>
-<h2 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a><strong>1.物理层</strong></h2><p>物理层就是最底层的电路之间的传输，不同的电脑与电脑之间相互通过网线，WiFi等，构建起了整个互联网的基础。</p>
-<h2 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a><strong>2.数据链路层</strong></h2><p>互联网的电脑数不胜数，我们两台电脑之间怎么相互连接，传递数据呢？首先就需要将电脑相互区分——MAC地址，然后传递数据需要单位吧，不然一堆0101传递过去计算机接受了也无法识别那部分属于什么应用程序的，当时不同得企业选择不同的单位，不同的风格，然后渐渐统一，出现了互联网的一个重要协议 ——以太网协议， 规定数据单位为：帧。</p>
-<h3 id="2-1-MAC地址"><a href="#2-1-MAC地址" class="headerlink" title="2.1 MAC地址"></a><strong>2.1 MAC地址</strong></h3><p>链接网络需要网卡，每台计算机的网卡地址就是MAC地址，每块网卡出厂的MAC地址独一无二。这样每台计算机就有了个独一无二的身份了。</p>
-<h3 id="2-2-以太网协议"><a href="#2-2-以太网协议" class="headerlink" title="2.2 以太网协议"></a><strong>2.2 以太网协议</strong></h3><p>以太网协议规定了网络数据传输过去的单位是一帧， 两台计算机之间的MAC地址也必须储存在帧中，所以一帧又分为标头(Head)和数据(Data)两部分。 标头(Head)存放两台计算机的MAC地址， 数据部分(Data)存放需要传输的数据。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052904.png" alt=""></p>
-<h3 id="2-3-广播"><a href="#2-3-广播" class="headerlink" title="2.3 广播"></a><strong>2.3 广播</strong></h3><p>现在发送方知道了接收方是谁，也就是网络IP（域名），数据也写成帧的形式，那么怎么确定在众多电脑中哪台是接收方呢？以太网的方式非常简单——广播，给所有的计算机都发送数据，让其他计算机自己判断，其他计算机接受到了数据，判断是不是自己，不对就将其抛弃，对就将自己的MAC地址发送回去。具体的实现——ARP协议（在网络层介绍）</p>
-<h2 id="3-网络层"><a href="#3-网络层" class="headerlink" title="3.网络层"></a><strong>3.网络层</strong></h2><p>广播技术理论上是能成立的。但是互联网的众多计算机中，用广播的方式给每台计算机发送一个数据包明显不现实。但是我们又需要知道对方计算机的MAC地址传输数据。那么就需要缩小范围，如果是在同一子网中的计算机，用广播的方式就能够实现。所以网络层提出了一个新的概念——IP。</p>
-<h3 id="3-1-IP协议"><a href="#3-1-IP协议" class="headerlink" title="3.1 IP协议"></a><strong>3.1 IP协议</strong></h3><p>每台计算机分配一个ip地址，目前广泛使用的是第四版，称为IPV4。由32位二进制组成，为了方便理解，我们分为四段十进制数从0.0.0.0到255.255.255.255，假设前24位为网络部分，后8位为主机部分。假设我们有一个ip地址为：192.168.0.123，那么192.168.0.*  ， 都为同一子网。该子网最多为2^8=256台， 如何确定多少位是网络多少位是主机呢？——子网掩码。</p>
-<h3 id="3-2-子网掩码"><a href="#3-2-子网掩码" class="headerlink" title="3.2 子网掩码"></a><strong>3.2 子网掩码</strong></h3><p>1&amp;1 = 1, 1&amp;0=0, 0&amp;0 = 0。 假设24位为网络部分，那么子网掩码为:1111 1111. 1111 1111.1111 1111.0000 0000 = 255.255.255.0, ip1 和ip2 两个ip是否在同一子网呢？ ip1 &amp; 子网掩码 == ip2&amp; 子网掩码，那么就是在同一子网。192.168.0.123&amp;255.255.225.0 = 192.168.0.0。</p>
-<h3 id="3-3-网关-gateway-和ARP协议"><a href="#3-3-网关-gateway-和ARP协议" class="headerlink" title="3.3  网关(gateway)和ARP协议"></a><strong>3.3  网关(gateway)和ARP协议</strong></h3><p>我们已知ip地址，那么就会碰到两种情况： 1.不在同一子网: 发送方将数据交给自己的网关，网关再去找到接受方ip的网关，然后就是在同一子网的情况了。 2.在同一子网:根据ARP协议，用广播的方式发送给接收方，接收方回应后得到接收方的MAC地址。 网关：网关实质上是一个网络通向其他网络的IP地址，有兴趣可以去查看一下DHCP服务器的实现原理。给一张百度的图片来理解： <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/8ad4b31c8701a18be9fc814f9e2f07082838fe9f.jpg" alt=""> ARP协议：地址解析协议，即ARP（Address Resolution Protocol），是根据IP地址获取MAC地址的一个TCP/IP协议。主机发送信息时将包含目标IP地址的ARP请求广播到该子网的网络上的所有主机，所有主机确认该IP是否是自己本身，不是则抛弃该信息，是的话接收返回自身的MAC地址，以此确定目标的物理地址。</p>
-<h3 id="3-4-IP数据包"><a href="#3-4-IP数据包" class="headerlink" title="3.4  IP数据包"></a><strong>3.4  IP数据包</strong></h3><p>根据以太网协议，数据包的单位为：帧： head+data， head中存放了MAC地址，但是我们又需要ip地址才能查找到。所以我们将数据部分继续拆分为head+data。head中存放ip地址。所以一帧数据变成了：head+head+data。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052910.png" alt=""></p>
-<h2 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4  传输层"></a><strong>4  传输层</strong></h2><p>我们已经知道ip和mac地址，我们可以准确的找到我们需要发送数据的那台计算机，但是计算机接受了数据怎么判断数据是交给哪个应用的呢？网上听歌和看电影那么传送过来的数据是歌曲应用的还是电影应用的呢？ ——端口。</p>
-<h3 id="4-1-端口："><a href="#4-1-端口：" class="headerlink" title="4.1 端口："></a><strong>4.1 端口：</strong></h3><p>计算机可以选择0到65535个端口，正好16个二进制位。0到1023的端口被系统占用，用户程序可以在1024~65535端口之间选择一个。用户计算机端口与服务器计算机端口相连接，然后就可以传输数据了。</p>
-<h3 id="4-2-UDP、-TCP-协议"><a href="#4-2-UDP、-TCP-协议" class="headerlink" title="4.2 UDP、**TCP**协议"></a><strong>4.2 UDP、**</strong>TCP<strong>**协议</strong></h3><p>如你所料，端口号当然也是要保存到数据包中，所以就有了UDP协议和TCP协议。UDP和TCP协议也同样继续将data分为head和data。head中存放端口号信息。 UDP协议：几乎就是简单的将端口号放入head中，数据没有安全保障，也容易丢包，但是传输速度非常快。比较适合语音，视频这类数据传播。 TCP协议：比较安全的将一些信息放入head中，通过协议不会丢包，通过三次握手保证信息的安全。是比较安全的一种协议。但是因为安全所以传输速度较慢。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052912.png" alt=""> 这时候一帧数据就变成了上面这样。 了解了上面的内容也许就能对ip地址有了一定的了解了，下面的图片应该看得懂了，DNS是将域名转化为IP地址一台服务器计算机。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180127161219.png" alt=""></p>
-<h2 id="5-应用层"><a href="#5-应用层" class="headerlink" title="5.应用层"></a><strong>5.应用层</strong></h2><p>不同的应用需要的数据都是不同的，向FTP传输数据格式，和邮件传输通过SMTP格式。应用层就是这些数据格式的协议组成的。为用户提供各种服务。 <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052913.png" alt=""></p>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a><strong>总结：</strong></h1><p>物理层：构成互联网基础，使得所有计算机能够物理连接在一起。 数据链路层：以太网协议，数据分为帧传递。Head存放计算机的MAC地址 网络层：IP协议，数据再次细分，Head存放计算机的ip地址 传输层：TCP或UDP协议，数据再细分， 确定数据端口。Head存放了端口号。 应用层：处理数据，为应用提供服务，使得用户能够明白和使用。</p>
-<h1 id="我的简单理解："><a href="#我的简单理解：" class="headerlink" title="我的简单理解："></a><strong>我的简单理解：</strong></h1><p>我的IP为192.168.0.111 ——&gt;浏览器访问 <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a>  , 通过域名解析(DNS)为 115.239.211.112， 通过子网掩码255.255.255.0 发现我的IP和百度的IP不在同一子网，所以本机发送一个数据包【（本机MAC地址，不知百度MAC地址），（本机的IP地址， 百度的IP地址）（TCP请求的端口）（请求正文）】的请求提交给网关(gateway)，网关去找到115.239.211.112。然后百度的服务器返回一个MAC地址。通过tcp协议三次握手建立连接。 致谢：<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html" target="_blank" rel="noopener">阮一峰的网络日志</a> 以上内容参考至阮一峰网络日志，需要更加详细了解可以去看看。</p>
-
+	
+  	
+  	  <h1 id="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><a href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。" class="headerlink" title="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"></a><strong>概念</strong>：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</h1><p>前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机的。</p>
+  	  
+        	<p class="article-more-link">
+        </p>
+      	  
+  	
       
 
       
@@ -283,45 +272,14 @@
          
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a><strong>概念：</strong></h2><p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 <strong>Question：</strong> 当注册一个网页的时候，填写完用户名，文本框刚刚失去焦点，马上提示该用户已经被注册。这肯定是访问了后台，但是页面也没有刷新呀。一般是用了AJAX。不重新加载整个页面的情况下与服务器进行交互。 <strong>语法：</strong> <strong>1. JavaScript：</strong></p>
-<pre><code>function getInfo()
-{
-    var xmlhttp;
-    if (window.XMLHttpRequest){
-            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-        xmlhttp=new XMLHttpRequest();
-    }else{    // IE6, IE5 浏览器执行代码
-        xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-    }
-    xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200){
-                 var str = xmlhttp.responseText;
-                 alter(str);
-        }
-    }
-    xmlhttp.open(&quot;GET&quot;,&quot;/url&quot;,true);
-    xmlhttp.send();
-}
-</code></pre><p>代码解释：(以Java为例！) 首先是执行最下面的xmlhttp.open();之后发送给服务器处理，处理完成后执行<code>onreadystatechange=function(){}</code> ，在其中操作。 xmlhttp.open()的三个参数分别是：执行get/post方法，访问的URL地址， 是否为异步请求。 第一个参数： GET，<code>xmlhttp.open(&quot;GET&quot;,&quot;/url&quot;,true);</code>  向服务器发送数据就只能在URL中带过去，/url?data=123; POST ，<code>xmlhttp.open(&quot;POST&quot;,&quot;/url&quot;,true);</code> 向服务器发送数据方法，<code>需要设置一下请求头, setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;); //`</code>以form表单的形式提交，后台就可以像接受form表单数据一样接受数据。  xmlhttp.send(“data=123”);<code>再向服务器发送数据。 第二个参数: /url    访问服务器的servlet。 第三个参数: true 为异步操作，方法写在</code>onreadystatechange=function(){}<code>中。 false为同步操作, 方法直接写在send的后面，不需要</code>onreadystatechange<code>解释：</code>xmlhttp.readyState==4` readyState从 0 到 4 发生变化。</p>
-<ul>
-<li>0: 请求未初始化</li>
-<li>1: 服务器连接已建立</li>
-<li>2: 请求已接收</li>
-<li>3: 请求处理中</li>
-<li>4: 请求已完成，且响应已就绪</li>
-</ul>
-<p>status为访问状态，404 页面没找到， 500 内部错误， 200访问正常等。</p>
-<ul>
-<li>1xx  -消息: 请求正在处理，请稍后。。。</li>
-<li>2xx -成功处理</li>
-<li>3xx -重定向到其他地方: 需要客户端再次发送请求</li>
-<li>4xx -客户端错误，eg: 非法的资源请求，禁止访问</li>
-<li>5xx -服务器段错误 ，eg: 服务器抛出异常</li>
-</ul>
-<p>在Java中将处理结果的字符串，一般是以JSON字符串返回，存储在前端xmlhttp.responseText中。 <strong>2.  jQuery写法：</strong> jquery将上述写法进行了封装，使得我们更加简单和方便的去使用ajax。常见用法：</p>
-<p>$.ajax(function(){<br>    type: “post”,<br>    url : “url”,<br>    data: {“name”:”Peter”},<br>    success:function(data, status){<br>       //处理<br>    },<br>    error:function(){<br>        //error有三个参数，可以依据情况需要写<br>    }<br>});</p>
-<p>jquery还专门封装了$.get() 和 $.post()的ajax用法，分别执行get和post。</p>
-
+	
+  	
+  	  <h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a><strong>概念：</strong></h2><p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。 AJAX 不是新的编程语言，而是一种使用现有标准的新方法。 AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。 AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 <strong>Question：</strong> 当注册一个网页的时候，填写完用户名，文本框刚刚失去焦点，马上提示该用户已经被注册。这肯定是访问了后台，但是页面也没有刷新呀。一般是用了AJAX。不重新加载整个页面的情况下与服务器进行交互。 <strong>语法：</strong> <strong>1. JavaScript：</strong></p>
+  	  
+        	<p class="article-more-link">
+        </p>
+      	  
+  	
       
 
       
@@ -329,6 +287,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -399,18 +368,16 @@
          
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>概念：</strong> JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。 <strong>语法：</strong> JSON 键值对是用来保存 JS 对象的一种方式，和 JS 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值。</p>
+	
+  	
+  	  <p><strong>概念：</strong> JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。 <strong>语法：</strong> JSON 键值对是用来保存 JS 对象的一种方式，和 JS 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值。</p>
 <p>{“key”:value}<br>等价于JavaScript的<br>{key : value}</p>
 <p><strong>重点：</strong> <strong>JSON 是 JS 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</strong> <strong>JSON 语法非常简单, 简单记住三种: {} 和 [] 和 :</strong> <strong>一对大括号, 代表一个对象, {id : 1, name:’xiaoming’}</strong> <strong>一对中括号, 代表一个数组, [{id : 1, name:’xiaoming’}, {id : 2, name:’xiaohong’}]</strong> <strong>  冒号,  冒号前是key, 后是value.</strong> JSON与JS对象之间的转化方式：</p>
-<p>要实现从对象转换为 JSON 字符串，使用 JSON.stringify() 方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  var json = JSON.stringify(&#123;a: </span><br><span class="line">&apos;Hello&apos;</span><br><span class="line">, b: </span><br><span class="line">&apos;World&apos;</span><br><span class="line">&#125;); </span><br><span class="line">  结果：&apos;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&apos;</span><br></pre></td></tr></table></figure>
-<p>要实现从 JSON 转换为对象，使用 JSON.parse() 方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  var obj = JSON.parse(</span><br><span class="line">&apos;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&apos;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">  结果： &#123;a: &apos;Hello&apos;, b: &apos;World&apos;&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>JSON 数组：</strong></p>
-<p>写在方括号中,{key : [value1_key : value, value2_key : value, …]}</p>
-<p>{<br>“employees”: [<br>{ “firstName”:”John” , “lastName”:”Doe” },<br>{ “firstName”:”Anna” , “lastName”:”Smith” },<br>{ “firstName”:”Peter” , “lastName”:”Jones” }<br>]<br>}</p>
-<p>因为json是一个字符串，所以传输起来比较快。解析起来也方便，web中常常用的到。</p>
-
+  	  
+        	<p class="article-more-link">
+        </p>
+      	  
+  	
       
 
       
@@ -499,8 +466,11 @@
          
     <div class="article-entry" itemprop="articleBody">
       
-        <p>GoodBye2017,新的一年马上就要到来!!!</p>
+	
+  	
+  	  <p>GoodBye2017,新的一年马上就要到来!!!</p>
 
+  	
       
 
       
@@ -671,6 +641,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>

@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052912.png">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/TIM图片20180127161219.png">
 <meta property="og:image" content="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/bg2012052913.png">
-<meta property="og:updated_time" content="2018-07-02T01:02:00.006Z">
+<meta property="og:updated_time" content="2018-07-02T06:26:45.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="互联网协议-简单理解和介绍">
 <meta name="twitter:description" content="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，http://www.baidu.com/ 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机">
@@ -185,10 +185,36 @@
         
       </header>
     
-         
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><span class="toc-number">1.</span> <span class="toc-text">概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、-五层模型。"><span class="toc-number">2.</span> <span class="toc-text">一、 五层模型。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-物理层"><span class="toc-number">2.1.</span> <span class="toc-text">1.物理层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数据链路层"><span class="toc-number">2.2.</span> <span class="toc-text">2.数据链路层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-MAC地址"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 MAC地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-以太网协议"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 以太网协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-广播"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 广播</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-网络层"><span class="toc-number">2.3.</span> <span class="toc-text">3.网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-IP协议"><span class="toc-number">2.3.1.</span> <span class="toc-text">3.1 IP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-子网掩码"><span class="toc-number">2.3.2.</span> <span class="toc-text">3.2 子网掩码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-网关-gateway-和ARP协议"><span class="toc-number">2.3.3.</span> <span class="toc-text">3.3  网关(gateway)和ARP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-IP数据包"><span class="toc-number">2.3.4.</span> <span class="toc-text">3.4  IP数据包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-传输层"><span class="toc-number">2.4.</span> <span class="toc-text">4  传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-端口："><span class="toc-number">2.4.1.</span> <span class="toc-text">4.1 端口：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-UDP、-TCP-协议"><span class="toc-number">2.4.2.</span> <span class="toc-text">4.2 UDP、**TCP**协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-应用层"><span class="toc-number">2.5.</span> <span class="toc-text">5.应用层</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结："><span class="toc-number">3.</span> <span class="toc-text">总结：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#我的简单理解："><span class="toc-number">4.</span> <span class="toc-text">我的简单理解：</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><a href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。" class="headerlink" title="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"></a><strong>概念</strong>：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</h1><p>前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机的。</p>
+	
+  	
+  	  <h1 id="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><a href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。" class="headerlink" title="概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"></a><strong>概念</strong>：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</h1><p>前提概要： 我们知道当我们访问互联网是，是在浏览器的导航栏输入一个网址，<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> 而一个网址对应的是一个ip地址，所以我们访问网址，那么就很清楚的认识到访问网址，就是访问另外一个ip地址的计算机上储存的网页。那么我们已知的只有计算机的ip，我们就根据这个来了解一下互联网的世界是如何做到的查找到另外的计算机的。</p>
 <h1 id="一、-五层模型。"><a href="#一、-五层模型。" class="headerlink" title="一、 五层模型。"></a><strong>一、 五层模型。</strong></h1><p>互联网的模型有7层模型， 4层模型的说法，5层模型是结合这两种更加利于理解的一种说法。5层模型从上往下分别是：应用层，传输层，网络层，数据链路层，物理层。（名词可能会有点出入，翻译问题） <img src="http://120.78.85.68/wordpress/wp-content/uploads/2018/01/7bf4e8201ee0799d2770a37ed41232eb.png" alt=""></p>
 <h2 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a><strong>1.物理层</strong></h2><p>物理层就是最底层的电路之间的传输，不同的电脑与电脑之间相互通过网线，WiFi等，构建起了整个互联网的基础。</p>
 <h2 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a><strong>2.数据链路层</strong></h2><p>互联网的电脑数不胜数，我们两台电脑之间怎么相互连接，传递数据呢？首先就需要将电脑相互区分——MAC地址，然后传递数据需要单位吧，不然一堆0101传递过去计算机接受了也无法识别那部分属于什么应用程序的，当时不同得企业选择不同的单位，不同的风格，然后渐渐统一，出现了互联网的一个重要协议 ——以太网协议， 规定数据单位为：帧。</p>
@@ -207,6 +233,7 @@
 <h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a><strong>总结：</strong></h1><p>物理层：构成互联网基础，使得所有计算机能够物理连接在一起。 数据链路层：以太网协议，数据分为帧传递。Head存放计算机的MAC地址 网络层：IP协议，数据再次细分，Head存放计算机的ip地址 传输层：TCP或UDP协议，数据再细分， 确定数据端口。Head存放了端口号。 应用层：处理数据，为应用提供服务，使得用户能够明白和使用。</p>
 <h1 id="我的简单理解："><a href="#我的简单理解：" class="headerlink" title="我的简单理解："></a><strong>我的简单理解：</strong></h1><p>我的IP为192.168.0.111 ——&gt;浏览器访问 <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a>  , 通过域名解析(DNS)为 115.239.211.112， 通过子网掩码255.255.255.0 发现我的IP和百度的IP不在同一子网，所以本机发送一个数据包【（本机MAC地址，不知百度MAC地址），（本机的IP地址， 百度的IP地址）（TCP请求的端口）（请求正文）】的请求提交给网关(gateway)，网关去找到115.239.211.112。然后百度的服务器返回一个MAC地址。通过tcp协议三次握手建立连接。 致谢：<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html" target="_blank" rel="noopener">阮一峰的网络日志</a> 以上内容参考至阮一峰网络日志，需要更加详细了解可以去看看。</p>
 
+  	
       
 
       
@@ -352,6 +379,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。"><span class="toc-number">1.</span> <span class="toc-text">概念：互联网实现过程中大家都需要遵循的准则，我们称之为协议。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、-五层模型。"><span class="toc-number">2.</span> <span class="toc-text">一、 五层模型。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-物理层"><span class="toc-number">2.1.</span> <span class="toc-text">1.物理层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数据链路层"><span class="toc-number">2.2.</span> <span class="toc-text">2.数据链路层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-MAC地址"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 MAC地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-以太网协议"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 以太网协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-广播"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 广播</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-网络层"><span class="toc-number">2.3.</span> <span class="toc-text">3.网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-IP协议"><span class="toc-number">2.3.1.</span> <span class="toc-text">3.1 IP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-子网掩码"><span class="toc-number">2.3.2.</span> <span class="toc-text">3.2 子网掩码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-网关-gateway-和ARP协议"><span class="toc-number">2.3.3.</span> <span class="toc-text">3.3  网关(gateway)和ARP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-IP数据包"><span class="toc-number">2.3.4.</span> <span class="toc-text">3.4  IP数据包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-传输层"><span class="toc-number">2.4.</span> <span class="toc-text">4  传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-端口："><span class="toc-number">2.4.1.</span> <span class="toc-text">4.1 端口：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-UDP、-TCP-协议"><span class="toc-number">2.4.2.</span> <span class="toc-text">4.2 UDP、**TCP**协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-应用层"><span class="toc-number">2.5.</span> <span class="toc-text">5.应用层</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结："><span class="toc-number">3.</span> <span class="toc-text">总结：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#我的简单理解："><span class="toc-number">4.</span> <span class="toc-text">我的简单理解：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -479,6 +519,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
             
             <div class="clearfix"></div>
