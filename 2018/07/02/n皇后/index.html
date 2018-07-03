@@ -6,18 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Category: JavaScript|JQuery | Pan</title>
+  <title>n皇后 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/categories/JavaScript-JQuery/index.html">
+  <meta name="description" content="n皇后问题-回溯法求解 1.算法描述在n×n格的国际象棋上摆放n个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。">
+<meta name="keywords" content="算法,回溯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="n皇后">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/07/02/n皇后/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="n皇后问题-回溯法求解 1.算法描述在n×n格的国际象棋上摆放n个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ipanyiwen.github.io/static/pic01.png">
+<meta property="og:image" content="https://ipanyiwen.github.io/static/pic02.png">
+<meta property="og:image" content="https://ipanyiwen.github.io/static/pic03.png">
+<meta property="og:updated_time" content="2018-07-03T07:11:35.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="n皇后">
+<meta name="twitter:description" content="n皇后问题-回溯法求解 1.算法描述在n×n格的国际象棋上摆放n个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。">
+<meta name="twitter:image" content="https://ipanyiwen.github.io/static/pic01.png">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -167,128 +173,274 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-n皇后" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/25/e7-ac-94-e8-ae-b0-ajax/" class="archive-article-date">
-  	<time datetime="2018-01-25T08:11:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/25/e7-ac-94-e8-ae-b0-ajax/">笔记: AJAX</a>
+    <h1 class="article-title" itemprop="name">
+      n皇后
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/02/n皇后/" class="archive-article-date">
+  	<time datetime="2018-07-02T12:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+</a>
+        
+      </header>
+    
+    
+	<span class="archive-article-date">
+		阅读量 <span id="busuanzi_value_page_pv"></span>
+	</span>
+    
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#n皇后问题-回溯法求解"><span class="toc-number">1.</span> <span class="toc-text">n皇后问题-回溯法求解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-算法描述"><span class="toc-number">1.1.</span> <span class="toc-text">1.算法描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-算法分析"><span class="toc-number">1.2.</span> <span class="toc-text">2.算法分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-回溯法"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 回溯法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-回溯法思路"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 回溯法思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-n皇后回溯求解"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 n皇后回溯求解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-时间复杂度"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-空间复杂度"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 空间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">3.代码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-拓展，位运算-回溯法实现"><span class="toc-number">1.4.</span> <span class="toc-text">4. 拓展，位运算+回溯法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-算法思路"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 算法思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2代码实现"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-算法分析"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 算法分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-展望"><span class="toc-number">1.5.</span> <span class="toc-text">5. 展望</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+           
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+  	
+  	  <h1 id="n皇后问题-回溯法求解"><a href="#n皇后问题-回溯法求解" class="headerlink" title="n皇后问题-回溯法求解"></a>n皇后问题-回溯法求解</h1><hr>
+<h2 id="1-算法描述"><a href="#1-算法描述" class="headerlink" title="1.算法描述"></a>1.算法描述</h2><p>在n×n格的国际象棋上摆放n个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。</p>
+<p><img src="/static/pic01.png" alt="pic"><br><a id="more"></a></p>
+<p>n皇后是由八皇后问题演变而来的。该问题是国际西洋棋棋手马克斯·贝瑟尔于1848年提出：在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，即任意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法。 高斯认为有76种方案。1854年在柏林的象棋杂志上不同的作者发表了40种不同的解，后来有人用图论的方法解出92种结果。</p>
+<h2 id="2-算法分析"><a href="#2-算法分析" class="headerlink" title="2.算法分析"></a>2.算法分析</h2><p>随着计算机的普及和发展，以前人们无法解决的问题，计算机可以简单计算出来。而且思路十分清晰，那就是暴力求解，遍历所有情况，然后计算出解的个数。</p>
+<h3 id="2-1-回溯法"><a href="#2-1-回溯法" class="headerlink" title="2.1 回溯法"></a>2.1 回溯法</h3><p>按选优条件向前搜索，以达到目标。但当探索到某一步时，发现原先选择并不优或达不到目标，就退回一步重新选择，这种走不通就退回再走的技术为回溯法</p>
+<h3 id="2-2-回溯法思路"><a href="#2-2-回溯法思路" class="headerlink" title="2.2 回溯法思路"></a>2.2 回溯法思路</h3><p>用数组模拟棋盘，从第一行开始，依次选择位置， 如果当前位置满足条件，则向下选位置， 如果不满足条件，那么当前位置后移一位。</p>
+<p><img src="/static/pic02.png" alt="pic"></p>
+<p><img src="/static/pic03.png" alt="pic"></p>
+<p>最后一个不满足，回溯到上一行， 选下个位置，继续试探。</p>
+<p>其实并不需要一个n*n的数组，我们只需要一个n长度的数组来存位置。</p>
+<p>表示方式： arr[i] = k; 表示： 第i行的第k个位置放一个皇后。这样一个arr[n]的数组就可以表示一个可行解， 由于回溯，我们就可以求所有解。</p>
+<h3 id="2-3-n皇后回溯求解"><a href="#2-3-n皇后回溯求解" class="headerlink" title="2.3 n皇后回溯求解"></a>2.3 n皇后回溯求解</h3><p>因为八皇后不能在同行，同列， 同斜线。</p>
+<ol>
+<li>每一行放一个皇后，就解决了不在同行的问题。</li>
+<li>在第i行的时候，遍历n列，试探位置。和之前所有行放的位置进行比较。</li>
+<li>比较列：当前列col 不等于 之前 所有列。 即col != arr[i].</li>
+<li>比较斜线， 因为不再同一斜率为1或者-1的斜线。(row - i) / (col - arr[i]) != 1 或 -1<br>可以取巧用绝对值函数: abs(row-i) != abs(col-arr[i])</li>
+</ol>
+<p>我们可以提取比较方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">comp</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span></span>&#123;   <span class="comment">//当前行和列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)  <span class="comment">//比较之前row -1 列。</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(col == arr[i] || abs(row-i) != abs(col-arr[i]))  <span class="comment">//如果在同一列，同一斜线</span></span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>比较函数写完后， 就只剩下回溯过程， 我们采用递归的方式回溯，比较好理解。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前层  row</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">  <span class="keyword">if</span>(comp(row, i))&#123;</span><br><span class="line">    arr[row] = i;</span><br><span class="line">    <span class="comment">//同样方式遍历下一层。 row + 1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-时间复杂度"><a href="#2-4-时间复杂度" class="headerlink" title="2.4 时间复杂度"></a>2.4 时间复杂度</h3><p> 递归n行， 每次循环 n 列， 比较 0～n-1 次。<br> n * n * (n - 1) / 2.<br> 也就是 O（n^3）. 哇塞，真暴力。</p>
+<h3 id="2-5-空间复杂度"><a href="#2-5-空间复杂度" class="headerlink" title="2.5 空间复杂度"></a>2.5 空间复杂度</h3><p>因为只用了arr[n]的数组，也就是O(n).</p>
+<h2 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3.代码实现"></a>3.代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NQueen</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">long</span> count;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] arr;</span><br><span class="line"><span class="comment">//    private int nn;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NQueen</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.n = n;</span><br><span class="line">  <span class="comment">//      nn = (1 &lt;&lt; n) - 1;</span></span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        arr = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * row col   i  arr[i]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> row</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> col</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Check</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(col == arr[i] || Math.abs(row - i) == Math.abs(col - arr[i])) <span class="comment">//在同一列或者在同一斜线。一定不在同一行</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FindNQueen</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (k == n) &#123;   <span class="comment">//求出一种解， count+1</span></span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Check(k, i)) &#123;   <span class="comment">//检查是否满足条件</span></span><br><span class="line">                arr[k] = i;      <span class="comment">//记录</span></span><br><span class="line">                FindNQueen(k + <span class="number">1</span>);   <span class="comment">//递归查找</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        NQueen nQueen = <span class="keyword">new</span> NQueen(<span class="number">13</span>);</span><br><span class="line">        nQueen.FindNQueen(<span class="number">0</span>);</span><br><span class="line">        System.out.println(nQueen.count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-拓展，位运算-回溯法实现"><a href="#4-拓展，位运算-回溯法实现" class="headerlink" title="4. 拓展，位运算+回溯法实现"></a>4. 拓展，位运算+回溯法实现</h2><p>虽然计算机算的很快，但是上诉方法实在是太慢了， java就更慢了。如何网上就有大佬给出了位运算求解。精妙的不行。</p>
+<h3 id="4-1-算法思路"><a href="#4-1-算法思路" class="headerlink" title="4.1 算法思路"></a>4.1 算法思路</h3><p>我们不再用数组来存储位置，而是用一个整数k，k一开始等于0. 不是普通的0.我们也不比较了，直接用两个整数l和r 记录在斜线在当前行不能走的位置。如果是n皇后， 那么用一个整数<br>nn =  1 &lt;&lt; n 表示结束。</p>
+<p>举个栗子吧： 8皇后问题。</p>
+<p>初始化 那么我们就变成二进制的角度来看这些初始化的数据吧。</p>
+<p>k = 00000000, l = 00000000, r = 00000000; nn = 11111111; (&lt;- 8个0 8个1)  </p>
+<ol>
+<li>k: 每个位置i的0表示没有皇后，1表示在第i个位置放了一个皇后。</li>
+<li>l: 0表示之前所有的列中放的皇后斜率为-1的线上没有涉及这个位置， 1 表示涉及到了，不能放皇后</li>
+<li>r: 同l， 所有斜率为1的线涉及的位置。</li>
+</ol>
+<p>l和r的实现：</p>
+<p>比如k = 00110001.  我要在第4个为位置放一个皇后， 假设l和r都没有涉及这个位置。</p>
+<p>那么这个位置x= 00001000.</p>
+<ol>
+<li>k = (k &amp; x) = 00111001.</li>
+<li>l = (l &amp; x) &lt;&lt; 1.</li>
+<li>r = (r &amp; x) &gt;&gt; 1.</li>
+</ol>
+<p>假设l = 00110001， r = 00100010.下一行，l表示斜率为-1不能放的位置， 那么第i+1行 l 中所有为1的数字都需要向左移动一位，r需要向右移动一位。 l &amp; x 也就是加上当前选中的位置一起移动。</p>
+<h3 id="4-2代码实现"><a href="#4-2代码实现" class="headerlink" title="4.2代码实现"></a>4.2代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//k  当前已走了多少个位置。   l 左斜线不能走的位置， r 右斜线不能走的位置。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FindNQueen</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(k == nn)&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> z = nn &amp; (~(k | l | r));  <span class="comment">//能走的位置， 和nn取并可以去掉前面多余的1</span></span><br><span class="line">    <span class="keyword">while</span>(z != <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">int</span> index = z &amp; (~z+<span class="number">1</span>);   <span class="comment">//最右边的一个1， 即要放皇后的位置。</span></span><br><span class="line">        z -= index;   <span class="comment">//去掉这个位置。</span></span><br><span class="line"></span><br><span class="line">        FindNQueen(k | index, (l|index)&lt;&lt;<span class="number">1</span>, (r|index)&gt;&gt;<span class="number">1</span>);   <span class="comment">//查找下一个。</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-3-算法分析"><a href="#4-3-算法分析" class="headerlink" title="4.3 算法分析"></a>4.3 算法分析</h3><ol>
+<li>时间复杂度，遍历n行， 每行n列.  O(n^2).  emmm 快了不少。</li>
+<li>空间复杂度，只用了几个变量， O(1).</li>
+</ol>
+<h2 id="5-展望"><a href="#5-展望" class="headerlink" title="5. 展望"></a>5. 展望</h2><p>其实还有其他方式和更快的方式求解，比如位运算+多线程， 还有号称时间复杂度为O(1)，利用数学公式的构造法求解。扶我起来，我要继续学。</p>
+
+  	
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">回溯</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript-JQuery//" class="article-tag-list-link color3">JavaScript|JQuery</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript-JQuery/编程笔记//" class="article-tag-list-link color5">编程笔记</a>
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/07/02/n皇后/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/25/javascript-e7-ac-94-e8-ae-b0-json/" class="archive-article-date">
-  	<time datetime="2018-01-25T07:05:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/26/wordpress-e4-bd-bf-e7-94-a8-font-awesome-e5-9b-be-e6-a0-87-e5-9c-a8-firefox-e4-b8-ad-e4-b8-8d-e6-98-be-e7-a4-ba-e9-97-ae-e9-a2-98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">wordpress使用 Font Awesome 图标在 Firefox 中不显示问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/25/javascript-e7-ac-94-e8-ae-b0-json/">JavaScript笔记: JSON</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">json</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript-JQuery//" class="article-tag-list-link color3">JavaScript|JQuery</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript-JQuery/编程笔记//" class="article-tag-list-link color5">编程笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#n皇后问题-回溯法求解"><span class="toc-number">1.</span> <span class="toc-text">n皇后问题-回溯法求解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-算法描述"><span class="toc-number">1.1.</span> <span class="toc-text">1.算法描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-算法分析"><span class="toc-number">1.2.</span> <span class="toc-text">2.算法分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-回溯法"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 回溯法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-回溯法思路"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 回溯法思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-n皇后回溯求解"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 n皇后回溯求解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-时间复杂度"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-空间复杂度"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 空间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">3.代码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-拓展，位运算-回溯法实现"><span class="toc-number">1.4.</span> <span class="toc-text">4. 拓展，位运算+回溯法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-算法思路"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 算法思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2代码实现"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-算法分析"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 算法分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-展望"><span class="toc-number">1.5.</span> <span class="toc-text">5. 展望</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Jul 02 2018 20:32:45 GMT+0800",
+  owner: 'Ipanyiwen',
+  repo: 'Ipanyiwen.github.io',
+  oauth: {
+    client_id: '203bba6fb35877914178',
+    client_secret: '28cb763d8ea50de8d2c56439de7ff89720127cfd',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
 
 
           </div>
@@ -315,10 +467,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
