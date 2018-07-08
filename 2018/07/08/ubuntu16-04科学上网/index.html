@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ipanyiwen.github.io/static/pic04.png">
 <meta property="og:image" content="https://ipanyiwen.github.io/static/pic05.png">
-<meta property="og:updated_time" content="2018-07-08T12:30:21.685Z">
+<meta property="og:updated_time" content="2018-07-08T12:53:44.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu16.04科学上网">
 <meta name="twitter:description" content="今天折腾了一下科学上网。系统ubuntu16.04， 记录一下。 先装个shadowsocks。图形化界面，简单操作。^.^ 123sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5 打开软件，添加服务器地址，端口等必要信息。恩，这个要么买，要么网上找免">
@@ -214,6 +214,8 @@
 <p>如果你有多个浏览器，可以在系统中直接设置全局。进入系统的设置 &gt; 网络 &gt; 网络代理</p>
 <p><img src="/static/pic05.png" alt="pic"></p>
 <p>设置完成，开心的科学上网吧^.^。</p>
+<p>问题：</p>
+<p>虽然上面的确可以做到科学上网，但是关闭起来挺麻烦的，首先关掉shadowsocks软件。然后关闭polipo服务 service polipo stop，最后去浏览器或者系统设置中将网络代理改为无。才能回到原来的状态。下次启动再改回来，如果资源比较充足的话，服务可以不关闭并设置开机自启动。那样关闭就只需两步。还是挺方便的。</p>
 
   	
       
