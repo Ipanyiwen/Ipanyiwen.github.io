@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ipanyiwen.github.io/"/>
-  <updated>2018-07-05T07:38:12.382Z</updated>
+  <updated>2018-07-08T12:30:21.685Z</updated>
   <id>https://ipanyiwen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu16.04科学上网</title>
+    <link href="https://ipanyiwen.github.io/2018/07/08/ubuntu16-04%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>https://ipanyiwen.github.io/2018/07/08/ubuntu16-04科学上网/</id>
+    <published>2018-07-08T11:59:48.000Z</published>
+    <updated>2018-07-08T12:30:21.685Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天折腾了一下科学上网。系统ubuntu16.04， 记录一下。</p><p>先装个shadowsocks。图形化界面，简单操作。^.^</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure><p>打开软件，添加服务器地址，端口等必要信息。恩，这个要么买，要么网上找免费的，要么自己搭。</p><p>因为shadowsocks默认是socks5,所以要想在浏览器用http访问，还是需要再装个软件polipo。将socks5转http。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install polipo</span><br></pre></td></tr></table></figure><p>到配置文件下 /etc/polipo/config，设置polipo。<br>将下面的文件替换原来的config。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#This file only needs to list configuration variables that deviate</span><br><span class="line"># from the default values. See /usr/share/doc/polipo/examples/config.sample</span><br><span class="line"># and &quot;polipo -v&quot; for variables you can tweak and further information.</span><br><span class="line">logSyslog = false</span><br><span class="line">logFile = &quot;/var/log/polipo/polipo.log&quot;</span><br><span class="line"></span><br><span class="line">socksParentProxy = &quot;127.0.0.1:1080&quot;</span><br><span class="line">socksProxyType = socks5</span><br><span class="line"></span><br><span class="line">chunkHighMark = 50331648</span><br><span class="line">objectHighMark = 16384</span><br><span class="line"></span><br><span class="line">serverMaxSlots = 64</span><br><span class="line">serverSlots = 16</span><br><span class="line">serverSlots1 = 32</span><br><span class="line"></span><br><span class="line">proxyAddress = &quot;0.0.0.0&quot;</span><br><span class="line">proxyPort = 8123</span><br></pre></td></tr></table></figure><p>重启polipo的服务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service polipo restart</span><br></pre></td></tr></table></figure></p><p>最后设置一下代理，如果只用火狐浏览器，可以在火狐浏览器的设置，首选项 &gt; 网络代理 &gt; 手动代理设置 。</p><p><img src="/static/pic04.png" alt="pic"></p><p>如果你有多个浏览器，可以在系统中直接设置全局。进入系统的设置 &gt; 网络 &gt; 网络代理</p><p><img src="/static/pic05.png" alt="pic"></p><p>设置完成，开心的科学上网吧^.^。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天折腾了一下科学上网。系统ubuntu16.04， 记录一下。&lt;/p&gt;
+&lt;p&gt;先装个shadowsocks。图形化界面，简单操作。^.^&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://ipanyiwen.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://ipanyiwen.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>http简史-互联网浪潮中的重要角色</title>
