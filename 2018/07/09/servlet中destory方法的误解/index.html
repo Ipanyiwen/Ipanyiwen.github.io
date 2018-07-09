@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>Category: 算法 | Pan</title>
+  <title>servlet中destory方法的误解 | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hello world.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pan">
-<meta property="og:url" content="https://ipanyiwen.github.io/categories/算法/index.html">
+  <meta name="description" content="最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。 我尝试手动调用destory方法。然后再去调用GET方法。发现还是会执行get， 也就是说执行了destory方法并不会销毁ser">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="servlet中destory方法的误解">
+<meta property="og:url" content="https://ipanyiwen.github.io/2018/07/09/servlet中destory方法的误解/index.html">
 <meta property="og:site_name" content="Pan">
-<meta property="og:description" content="hello world.">
+<meta property="og:description" content="最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。 我尝试手动调用destory方法。然后再去调用GET方法。发现还是会执行get， 也就是说执行了destory方法并不会销毁ser">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-09T12:57:27.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pan">
-<meta name="twitter:description" content="hello world.">
+<meta name="twitter:title" content="servlet中destory方法的误解">
+<meta name="twitter:description" content="最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。 我尝试手动调用destory方法。然后再去调用GET方法。发现还是会执行get， 也就是说执行了destory方法并不会销毁ser">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -167,124 +169,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-servlet中destory方法的误解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/n皇后/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/n皇后/">n皇后</a>
+    <h1 class="article-title" itemprop="name">
+      servlet中destory方法的误解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/09/servlet中destory方法的误解/" class="archive-article-date">
+  	<time datetime="2018-07-09T12:39:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
+</a>
+        
+      </header>
+    
+    
+	<span class="archive-article-date">
+		阅读量 <span id="busuanzi_value_page_pv"></span>
+	</span>
+    
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+  	
+  	  <p>最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。</p>
+<p>我尝试手动调用destory方法。然后再去调用GET方法。发现还是会执行get， 也就是说执行了destory方法并不会销毁servlet。我就怀疑是不是服务器重新创建了一个servlet。然后我继续测试</p>
+<p>用ajax测试的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">本次请求的方式为：PUT</span><br><span class="line">本次请求的方式为：GET</span><br><span class="line">本次请求的方式为：DESTORY</span><br><span class="line">servlet.IndexServlet@36cfac98</span><br><span class="line">正在销毁servlet。。。</span><br><span class="line">本次请求的方式为：GET</span><br><span class="line">本次请求的方式为：DESTORY</span><br><span class="line">servlet.IndexServlet@36cfac98</span><br><span class="line">正在销毁servlet。。。</span><br></pre></td></tr></table></figure></p>
+<p>打印了servlet的地址，发现前后是同一个servlet。所以servlet并没有销毁。</p>
+<p>断点跟踪发现super.destory()是一个空方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法写在GenericServlet类中。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也就是这个方法并不是真正销毁servlet。所以我的理解是：</p>
+<p>服务器关闭或者销毁servlet的时候会执行destory方法告知使用者，我要销毁这个servlet了。而我们手动执行destory方法并不会真的销毁servlet。</p>
+<p>如理解错误望告知！谢谢。</p>
+
+  	
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">回溯</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        			<a href="/categories/随笔/JAVA//" class="article-tag-list-link color5">JAVA</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ipanyiwen.github.io/2018/07/09/servlet中destory方法的误解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/" class="archive-article-date">
-  	<time datetime="2018-05-26T13:48:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/08/ubuntu16-04科学上网/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu16.04科学上网</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/26/e5-a0-86-e6-8e-92-e5-ba-8f/">堆排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Jul 09 2018 20:39:28 GMT+0800",
+  owner: 'Ipanyiwen',
+  repo: 'Ipanyiwen.github.io',
+  oauth: {
+    client_id: '203bba6fb35877914178',
+    client_secret: '28cb763d8ea50de8d2c56439de7ff89720127cfd',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
 
 
           </div>
@@ -311,10 +384,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",

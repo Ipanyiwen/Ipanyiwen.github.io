@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ipanyiwen.github.io/"/>
-  <updated>2018-07-08T12:53:44.198Z</updated>
+  <updated>2018-07-09T12:57:27.413Z</updated>
   <id>https://ipanyiwen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>servlet中destory方法的误解</title>
+    <link href="https://ipanyiwen.github.io/2018/07/09/servlet%E4%B8%ADdestory%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%AF%E8%A7%A3/"/>
+    <id>https://ipanyiwen.github.io/2018/07/09/servlet中destory方法的误解/</id>
+    <published>2018-07-09T12:39:28.000Z</published>
+    <updated>2018-07-09T12:57:27.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。</p><p>我尝试手动调用destory方法。然后再去调用GET方法。发现还是会执行get， 也就是说执行了destory方法并不会销毁servlet。我就怀疑是不是服务器重新创建了一个servlet。然后我继续测试</p><p>用ajax测试的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">本次请求的方式为：PUT</span><br><span class="line">本次请求的方式为：GET</span><br><span class="line">本次请求的方式为：DESTORY</span><br><span class="line">servlet.IndexServlet@36cfac98</span><br><span class="line">正在销毁servlet。。。</span><br><span class="line">本次请求的方式为：GET</span><br><span class="line">本次请求的方式为：DESTORY</span><br><span class="line">servlet.IndexServlet@36cfac98</span><br><span class="line">正在销毁servlet。。。</span><br></pre></td></tr></table></figure></p><p>打印了servlet的地址，发现前后是同一个servlet。所以servlet并没有销毁。</p><p>断点跟踪发现super.destory()是一个空方法。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法写在GenericServlet类中。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>也就是这个方法并不是真正销毁servlet。所以我的理解是：</p><p>服务器关闭或者销毁servlet的时候会执行destory方法告知使用者，我要销毁这个servlet了。而我们手动执行destory方法并不会真的销毁servlet。</p><p>如理解错误望告知！谢谢。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近学习servlet的过程中发现了一个很怪的问题， 百度上面搜索这个问题也几乎都是错误的理解。那就是有关servlet在什么时候摧毁，回答很多是服务器关闭或者执行destory方法。服务器关闭servlet肯定会销毁，但是执行destory并不会销毁servlet。&lt;/p
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://ipanyiwen.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="JAVA" scheme="https://ipanyiwen.github.io/categories/%E9%9A%8F%E7%AC%94/JAVA/"/>
+    
+    
+      <category term="随笔" scheme="https://ipanyiwen.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>ubuntu16.04科学上网</title>
