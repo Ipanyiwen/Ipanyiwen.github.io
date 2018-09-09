@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ipanyiwen.github.io/"/>
-  <updated>2018-07-09T12:57:27.413Z</updated>
+  <updated>2018-09-09T11:22:34.539Z</updated>
   <id>https://ipanyiwen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>商汤java实习生面试题</title>
+    <link href="https://ipanyiwen.github.io/2018/09/09/%E5%95%86%E6%B1%A4java%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://ipanyiwen.github.io/2018/09/09/商汤java面试题/</id>
+    <published>2018-09-09T11:10:47.000Z</published>
+    <updated>2018-09-09T11:22:34.539Z</updated>
+    
+    <content type="html"><![CDATA[<p>前两天面深圳商汤，java实习生。记录一下。</p><h4 id="技术一面。"><a href="#技术一面。" class="headerlink" title="技术一面。"></a>技术一面。</h4><ol><li>前台传递数据给后台的详细过程。画图</li><li>https协议，运用了加密。过程是什么？</li><li>servlet实现了什么接口。没答上来。退而求次，回答了servlet里面有什么方法。</li><li>多线程，超级多。</li><li>数据库，事务。隔离级别。</li><li>集合有哪些。适用范围，什么场合。</li><li>int和Integer的127范围双等问题。为什么选127这个数字。</li><li>jvm底层的一些原理，知不知道Java使用了除了jvm的那五个外还使用了系统内存的什么方面。</li><li>保证多线程安全的方式，除了加锁和CAS还有什么技术。</li><li>如果不用tomcat等web服务器，如何实现http过程。</li><li>tomcat会做些什么。之类的。</li><li>数据库ACID。各是什么。介绍一下。</li><li>强，软，弱，虚引用，什么场景需要用到这些引用。</li></ol><p>然后要手写求一堆数据的第K大。不会，堆排怕写错，只好手写快排。 其实后来想想应该写快排剪枝。时间复杂度应该接近O(n)</p><h4 id="技术二面"><a href="#技术二面" class="headerlink" title="技术二面."></a>技术二面.</h4><ol><li>springboot了解多少。常用的注解。</li><li>看过什么书，深入jvm底层原理那本看没看。</li><li>平时喜欢逛论坛博客。学习Java哪方面的知识</li><li>有没有用到多线程。继续多线程。</li><li>数据库事务，隔离级别。</li><li>spring事务，隔离级别。</li><li>sql优化。索引原理。b树和b+树的区别。</li><li>jvm内存结构。</li><li>介绍常量池。Java都是引用类型。所以String的双等。（脑袋有点懵，居然这么简单都答错了）。</li><li>spring事务传播级别有哪些。怎么实现。</li><li>jvm底层之类的。</li></ol><p>还有一些来着。想不起来了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前两天面深圳商汤，java实习生。记录一下。&lt;/p&gt;
+&lt;h4 id=&quot;技术一面。&quot;&gt;&lt;a href=&quot;#技术一面。&quot; class=&quot;headerlink&quot; title=&quot;技术一面。&quot;&gt;&lt;/a&gt;技术一面。&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;前台传递数据给后台的详细过程。画图&lt;/li&gt;
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="https://ipanyiwen.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="面试题" scheme="https://ipanyiwen.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>servlet中destory方法的误解</title>
