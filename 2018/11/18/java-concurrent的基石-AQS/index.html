@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。 AQS支持共享和非共享两种模式，非共享对应的有Reentra">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ipanyiwen.github.io/2018/11/18/java-concurrent的基石-AQS/%22/static/pic07.png%22">
-<meta property="og:updated_time" content="2018-12-16T19:14:56.060Z">
+<meta property="og:image" content="https://ipanyiwen.github.io/static/pic07.png">
+<meta property="og:updated_time" content="2018-12-16T19:17:00.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-concurrent的基石-AQS">
 <meta name="twitter:description" content="学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。 AQS支持共享和非共享两种模式，非共享对应的有Reentra">
-<meta name="twitter:image" content="https://ipanyiwen.github.io/2018/11/18/java-concurrent的基石-AQS/%22/static/pic07.png%22">
+<meta name="twitter:image" content="https://ipanyiwen.github.io/static/pic07.png">
   
     <link rel="alternative" href="/atom.xml" title="Pan" type="application/atom+xml">
   
@@ -202,7 +202,7 @@
   	  <p>学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。</p>
 <p>AQS支持共享和非共享两种模式，非共享对应的有ReentrantLock， 而共享对应的有CountDownLatch，semaphore等。</p>
 <p>AQS的数据结构其实比较简单， 大致这个样子。</p>
-<p><img src="&quot;/static/pic07.png&quot;" alt="pic"></p>
+<p><img src="/static/pic07.png" alt="pic"></p>
 <ol>
 <li>head 和 tail 类型都是AQS的内部类-&gt; node类型，</li>
 <li>state是一个int类型.也就是互斥/共享资源，state&gt;0 资源被占用， state==0 资源被释放。</li>
