@@ -169,6 +169,197 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-浅析tomcat原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/24/浅析tomcat原理/">浅析tomcat原理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/24/浅析tomcat原理/" class="archive-article-date">
+  	<time datetime="2018-11-23T18:56:12.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
+</a>
+        
+      </header>
+    
+    
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+  	
+  	  <p>上上个星期，看了一下how tomcat works这本书，今天捡起来看一会，发现忘得有点快，特地写点东西，加深一下记忆。因为书讲的是tomcat4，5的内容，比较旧了，所以和最新的tomcat的差距还是有点大的。而且还没看完，以后再补充吧。</p>
+<p>java那些用起来方便的东西，大多都是大佬们的封装，就和java线程的方式一样，不论是thread，runnable，callable,线程池等等方式，真正底层都是thread。tomcat看上去一个及其复杂的系统，追本溯源也就是socket 和 serversocket。</p>
+<p>计算机网络之间的通信是基于端口之间通信，对于服务器，从端口读取数据，也就是inputStream， 往端口写数据，也就是outputStream。</p>
+  	  
+        	<p class="article-more-link">
+        </p>
+      	  
+  	
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/24/浅析tomcat原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java-concurrent的基石-AQS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/18/java-concurrent的基石-AQS/">java-concurrent的基石-AQS</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/18/java-concurrent的基石-AQS/" class="archive-article-date">
+  	<time datetime="2018-11-17T16:02:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-18</time>
+</a>
+        
+      </header>
+    
+    
+         
+    <div class="article-entry" itemprop="articleBody">
+      
+	
+  	
+  	  <p>学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。</p>
+<p>AQS支持共享和非共享两种模式，非共享对应的有ReentrantLock， 而共享对应的有CountDownLatch，semaphore等。</p>
+<p>AQS的数据结构其实比较简单， 大致这个样子。</p>
+<p><img src="&quot;/static/pic07.png&quot;" alt="pic"></p>
+  	  
+        	<p class="article-more-link">
+        </p>
+      	  
+  	
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java并发</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/18/java-concurrent的基石-AQS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-商汤java面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -922,201 +1113,9 @@
 
 
   
-    <article id="post-c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">C语言_06 指针</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/" class="archive-article-date">
-  	<time datetime="2018-03-19T18:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-20</time>
-</a>
-        
-      </header>
-    
-    
-         
-    <div class="article-entry" itemprop="articleBody">
-      
-	
-  	
-  	  <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
-<p><strong>指针</strong>（Pointer）是编程语言中的一个对象，利用地址，它的值直接指向（points to）存在电脑存储器中另一个地方的值。由于通过地址能找到所需的变量单元，可以说，地址指向该变量单元。因此，将地址形象化的称为“指针”。意思是通过它能找到以它为地址的内存单元。</p>
-</blockquote>
-<p>我们都知道, 在计算机语言中, 变量是储存在计算机的内存中的, 所以C程序想要访问得到变量必须知道储存在计算机内存中的什么位置, 在C程序中用来存储这个位置的变量就是指针.</p>
-  	  
-        	<p class="article-more-link">
-        </p>
-      	  
-  	
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/20/c-e8-af-ad-e8-a8-80-06-e6-8c-87-e9-92-88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">C语言_05 函数详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2018-02-11T19:14:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
-        
-      </header>
-    
-    
-         
-    <div class="article-entry" itemprop="articleBody">
-      
-	
-  	
-  	  <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><blockquote>
-<p>“函数”是从英文function翻译过来的，其实，function在英文中的意思即是“函数”，也是“功能”。从本质意义上来说，函数就是用来完成一定功能的。这样对函数的概念就很好理解了，所谓函数名就是给该功能起个名字，如果该功能是用来实现数学运算的，就是数学函数。</p>
-</blockquote>
-<h2 id="函数的写法"><a href="#函数的写法" class="headerlink" title="函数的写法"></a>函数的写法</h2><pre><code>返回类型 函数名(参数1, 参数2, ... 参数n)//参数可以不写
-  	  
-        	<p class="article-more-link">
-        </p>
-      	  
-  	
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/12/c-e8-af-ad-e8-a8-80-05-e5-87-bd-e6-95-b0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1223,11 +1222,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1239,11 +1238,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">json</a>
+                <a href="javascript:void(0)" class="js-tag color2">java并发</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">json</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1251,7 +1250,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>
