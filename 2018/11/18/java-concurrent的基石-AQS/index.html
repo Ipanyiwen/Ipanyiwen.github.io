@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ipanyiwen.github.io">
-  <title>java-concurrent的基石-AQS | Pan</title>
+  <title>java-AbstractQueuedSynchronizer(AQS) | Pan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。 AQS支持共享和非共享两种模式，非共享对应的有Reentra">
 <meta name="keywords" content="java并发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java-concurrent的基石-AQS">
+<meta property="og:title" content="java-AbstractQueuedSynchronizer(AQS)">
 <meta property="og:url" content="https://ipanyiwen.github.io/2018/11/18/java-concurrent的基石-AQS/index.html">
 <meta property="og:site_name" content="Pan">
 <meta property="og:description" content="学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。 AQS支持共享和非共享两种模式，非共享对应的有Reentra">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ipanyiwen.github.io/static/pic07.png">
-<meta property="og:updated_time" content="2018-12-16T19:18:11.182Z">
+<meta property="og:updated_time" content="2018-12-16T19:19:38.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java-concurrent的基石-AQS">
+<meta name="twitter:title" content="java-AbstractQueuedSynchronizer(AQS)">
 <meta name="twitter:description" content="学习java的并发包(JUC, java.util.concurrent)，自然就回想起几个著名的类: ReentrantLock、Semaphore、CountDownLatch等。而在这些类都是基于AQS(AbstractQueuedSynchronizer)实现的,一个抽象模板类。 了解和学习AQS， 可以更好的理解和掌握JUC。 AQS支持共享和非共享两种模式，非共享对应的有Reentra">
 <meta name="twitter:image" content="https://ipanyiwen.github.io/static/pic07.png">
   
@@ -178,7 +178,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      java-concurrent的基石-AQS
+      java-AbstractQueuedSynchronizer(AQS)
     </h1>
   
 
